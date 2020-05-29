@@ -6,7 +6,7 @@
     <semanticResources>../instances/Selfie.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_cBpsAKGKEeqgBcJBc5-rQw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_cCYEwKGKEeqgBcJBc5-rQw" name="modellgetriebeneAufgabe4" repPath="#_cCO60KGKEeqgBcJBc5-rQw" changeId="d0951573-cd73-424f-89fa-0eb073db2dc0">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_cCYEwKGKEeqgBcJBc5-rQw" name="modellgetriebeneAufgabe4" repPath="#_cCO60KGKEeqgBcJBc5-rQw" changeId="5b27384e-7dd9-44ff-8bdc-cec2015fac91">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="modellgetriebeneAufgabe4.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -170,7 +170,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="__5NvxqGLEeqgBcJBc5-rQw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="__5NvwaGLEeqgBcJBc5-rQw" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__5NvwqGLEeqgBcJBc5-rQw" x="50" y="359" width="120" height="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__5NvwqGLEeqgBcJBc5-rQw" x="50" y="360" width="120" height="100"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_phvHsKGcEeqgBcJBc5-rQw" type="2003" element="_phrdUKGcEeqgBcJBc5-rQw">
           <children xmi:type="notation:Node" xmi:id="_phvHs6GcEeqgBcJBc5-rQw" type="5007"/>
