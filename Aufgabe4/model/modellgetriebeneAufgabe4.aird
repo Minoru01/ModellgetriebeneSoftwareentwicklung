@@ -3,6 +3,7 @@
   <viewpoint:DAnalysis uid="_cAZu0KGKEeqgBcJBc5-rQw" selectedViews="_cBpsAKGKEeqgBcJBc5-rQw" version="14.3.0.201909031200">
     <semanticResources>modellgetriebeneAufgabe4.ecore</semanticResources>
     <semanticResources>modellgetriebeneAufgabe4.genmodel</semanticResources>
+    <semanticResources>../instances/Selfie.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_cBpsAKGKEeqgBcJBc5-rQw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_cCYEwKGKEeqgBcJBc5-rQw" name="modellgetriebeneAufgabe4" repPath="#_cCO60KGKEeqgBcJBc5-rQw" changeId="90f2d1d2-d872-4af5-bb65-f922df77018d">
