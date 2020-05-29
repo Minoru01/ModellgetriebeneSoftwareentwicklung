@@ -18,16 +18,18 @@
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Selfie">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Selfie/expression"/>
     </genClasses>
-    <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Expression"/>
+    <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Expression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Expression/valueable"/>
+    </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Assignment">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Assignment/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//Assignment/name"/>
     </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//VariableRef">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//VariableRef/variable"/>
     </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Literal"/>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Declaration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Declaration/valueable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//Declaration/name"/>
     </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//IntValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//IntValue/type"/>
