@@ -60,6 +60,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Calculation/leftvalue"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Calculation/rightvalue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//Calculation/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Calculation/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -43,7 +43,7 @@
     <eLiterals name="double" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ValType" abstract="true" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Valueable">
+  <eClassifiers xsi:type="ecore:EClass" name="Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Value"/>
   </eClassifiers>
@@ -55,6 +55,8 @@
         eType="#//Valueable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
         eType="#//Operator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Value"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Operator">
     <eLiterals name="undef"/>
