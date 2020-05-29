@@ -17,7 +17,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueable" lowerBound="1"
         eType="#//Valueable" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntValue" eSuperTypes="#//Valueable">
+  <eClassifiers xsi:type="ecore:EClass" name="IntValue" eSuperTypes="#//ValType #//Valueable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Types"
         defaultValueLiteral="int"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -30,7 +30,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="valueable" lowerBound="1"
         eType="#//Valueable" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DoubleValue" eSuperTypes="#//Valueable">
+  <eClassifiers xsi:type="ecore:EClass" name="DoubleValue" eSuperTypes="#//ValType #//Valueable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Types"
         defaultValueLiteral="double"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
@@ -39,4 +39,5 @@
     <eLiterals name="double"/>
     <eLiterals name="int" value="1"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValType" abstract="true" interface="true"/>
 </ecore:EPackage>

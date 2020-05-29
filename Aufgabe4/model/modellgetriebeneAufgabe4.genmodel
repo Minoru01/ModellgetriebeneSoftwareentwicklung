@@ -41,5 +41,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//DoubleValue/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//DoubleValue/value"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="modellgetriebeneAufgabe4.ecore#//ValType"/>
   </genPackages>
 </genmodel:GenModel>
