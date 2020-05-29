@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="modellgetriebeneAufgabe4" nsURI="http://www.example.org/modellgetriebeneAufgabe4"
+    nsPrefix="modellgetriebeneAufgabe4">
+  <eClassifiers xsi:type="ecore:EClass" name="Selfie">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" upperBound="-1"
+        eType="#//Expression" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Assignment" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" upperBound="-1"
+        eType="#//Variable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Valueable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//Valueable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Declaration" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valueable" upperBound="-1"
+        eType="#//Valueable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntValue" eSuperTypes="#//Valueable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Types"
+        defaultValueLiteral="int"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Valueable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" upperBound="-1"
+        eType="#//Operator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operator">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valueable" upperBound="-1"
+        eType="#//Valueable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DoubleValue" eSuperTypes="#//Valueable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Types"
+        defaultValueLiteral="double"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Types">
+    <eLiterals name="double"/>
+    <eLiterals name="int" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>
