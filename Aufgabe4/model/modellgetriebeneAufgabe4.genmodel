@@ -20,9 +20,11 @@
     </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Expression"/>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Assignment">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Assignment/variableref"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Assignment/variable"/>
     </genClasses>
-    <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//VariableRef"/>
+    <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//VariableRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//VariableRef/variable"/>
+    </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Literal"/>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Declaration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Declaration/valueable"/>
@@ -43,7 +45,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//DoubleValue/value"/>
     </genClasses>
     <genClasses image="false" ecoreClass="modellgetriebeneAufgabe4.ecore#//ValType"/>
-    <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Variable"/>
+    <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//Variable/name"/>
+    </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Value"/>
   </genPackages>
 </genmodel:GenModel>
