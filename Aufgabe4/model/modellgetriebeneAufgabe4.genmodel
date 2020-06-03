@@ -43,19 +43,19 @@
     </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//IntValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//IntValue/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//IntValue/type"/>
     </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Valueable"/>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//DoubleValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//DoubleValue/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//DoubleValue/type"/>
     </genClasses>
     <genClasses image="false" ecoreClass="modellgetriebeneAufgabe4.ecore#//ValType"/>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//Variable/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Variable/value"/>
     </genClasses>
-    <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Value"/>
+    <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute modellgetriebeneAufgabe4.ecore#//Value/type"/>
+    </genClasses>
     <genClasses ecoreClass="modellgetriebeneAufgabe4.ecore#//Calculation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Calculation/leftvalue"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference modellgetriebeneAufgabe4.ecore#//Calculation/rightvalue"/>
