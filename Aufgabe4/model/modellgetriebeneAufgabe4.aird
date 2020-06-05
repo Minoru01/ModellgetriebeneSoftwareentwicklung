@@ -6,7 +6,7 @@
     <semanticResources>../instances/Selfie.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_cBpsAKGKEeqgBcJBc5-rQw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_cCYEwKGKEeqgBcJBc5-rQw" name="modellgetriebeneAufgabe4" repPath="#_cCO60KGKEeqgBcJBc5-rQw" changeId="50215cfb-4ac6-49c9-aab9-531d61b2137c">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_cCYEwKGKEeqgBcJBc5-rQw" name="modellgetriebeneAufgabe4" repPath="#_cCO60KGKEeqgBcJBc5-rQw" changeId="65307383-c0fb-4214-9643-7f382b354517">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="modellgetriebeneAufgabe4.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -102,9 +102,9 @@
         <children xmi:type="notation:Node" xmi:id="_jZ6TAKGKEeqgBcJBc5-rQw" type="2003" element="_jZ3PsKGKEeqgBcJBc5-rQw">
           <children xmi:type="notation:Node" xmi:id="_jZ6TA6GKEeqgBcJBc5-rQw" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_jZ6TBKGKEeqgBcJBc5-rQw" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_Q-x9wKcXEeql2YQc3thi9Q" type="3010" element="_Q-iGIacXEeql2YQc3thi9Q">
-              <styles xmi:type="notation:FontStyle" xmi:id="_Q-x9wacXEeql2YQc3thi9Q" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_Q-x9wqcXEeql2YQc3thi9Q"/>
+            <children xmi:type="notation:Node" xmi:id="_eFzekKc8Eeql2YQc3thi9Q" type="3010" element="_eFt_Aqc8Eeql2YQc3thi9Q">
+              <styles xmi:type="notation:FontStyle" xmi:id="_eFzekac8Eeql2YQc3thi9Q" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_eFzekqc8Eeql2YQc3thi9Q"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_jZ6TBaGKEeqgBcJBc5-rQw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_jZ6TBqGKEeqgBcJBc5-rQw"/>
@@ -577,12 +577,12 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_Q-iGIacXEeql2YQc3thi9Q" name="checkVal(val Valueable, var Variable) : EBooleanObject" tooltipText="checkVal(val, var) : EBooleanObject">
-        <target xmi:type="ecore:EOperation" href="modellgetriebeneAufgabe4.ecore#//Declaration/checkVal"/>
-        <semanticElements xmi:type="ecore:EOperation" href="modellgetriebeneAufgabe4.ecore#//Declaration/checkVal"/>
-        <semanticElements xmi:type="ecore:EParameter" href="modellgetriebeneAufgabe4.ecore#//Declaration/checkVal/val"/>
-        <semanticElements xmi:type="ecore:EParameter" href="modellgetriebeneAufgabe4.ecore#//Declaration/checkVal/var"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_Q-itMKcXEeql2YQc3thi9Q" labelAlignment="LEFT">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_eFt_Aqc8Eeql2YQc3thi9Q" name="checkValue(val Valueable, var Variable) : EBooleanObject" tooltipText="checkValue(val, var) : EBooleanObject">
+        <target xmi:type="ecore:EOperation" href="modellgetriebeneAufgabe4.ecore#//Declaration/checkValue"/>
+        <semanticElements xmi:type="ecore:EOperation" href="modellgetriebeneAufgabe4.ecore#//Declaration/checkValue"/>
+        <semanticElements xmi:type="ecore:EParameter" href="modellgetriebeneAufgabe4.ecore#//Declaration/checkValue/val"/>
+        <semanticElements xmi:type="ecore:EParameter" href="modellgetriebeneAufgabe4.ecore#//Declaration/checkValue/var"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_eFumEKc8Eeql2YQc3thi9Q" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
