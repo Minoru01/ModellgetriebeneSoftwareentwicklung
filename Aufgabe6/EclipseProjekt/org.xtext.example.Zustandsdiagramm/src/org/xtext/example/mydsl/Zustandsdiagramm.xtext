@@ -1,0 +1,31 @@
+grammar org.xtext.example.mydsl.Zustandsdiagramm with org.eclipse.xtext.common.Terminals
+
+generate zustandsdiagramm "http://www.xtext.org/example/mydsl/Zustandsdiagramm"
+
+Model:
+	initialState += InitialState &
+	finalState += FinalState &
+	genericState += GenericState*;
+	
+TargetableState:
+	name=ID;
+	
+InitialState:
+	'initialState' ':' name=ID 'with' transition = Transition ';';
+
+FinalState:
+	'finalState' ':' name=TargetableState ';';
+
+GenericState:
+	'genericState' ':' name=TargetableState 'with' (transitions+=Transition)+ ';';
+
+Transition:
+	'event' ':' event=Event 'to' to=[TargetableState];
+
+Event:
+	name=ID ('and' guard=Guard)?;
+
+Guard:
+	'guard' ':' name=ID;
+	
+	
