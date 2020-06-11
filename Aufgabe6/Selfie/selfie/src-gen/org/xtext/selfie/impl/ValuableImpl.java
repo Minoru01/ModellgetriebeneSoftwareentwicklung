@@ -11,7 +11,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.xtext.selfie.Operator;
 import org.xtext.selfie.SelfiePackage;
 import org.xtext.selfie.Valuable;
 
@@ -30,7 +29,7 @@ import org.xtext.selfie.Valuable;
  *
  * @generated
  */
-public class ValuableImpl extends DeclarationImpl implements Valuable
+public class ValuableImpl extends AssignmentImpl implements Valuable
 {
   /**
    * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
@@ -50,7 +49,7 @@ public class ValuableImpl extends DeclarationImpl implements Valuable
    * @generated
    * @ordered
    */
-  protected static final Operator OPERATOR_EDEFAULT = Operator.PLUS;
+  protected static final String OPERATOR_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -60,7 +59,7 @@ public class ValuableImpl extends DeclarationImpl implements Valuable
    * @generated
    * @ordered
    */
-  protected Operator operator = OPERATOR_EDEFAULT;
+  protected String operator = OPERATOR_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
@@ -149,7 +148,7 @@ public class ValuableImpl extends DeclarationImpl implements Valuable
    * @generated
    */
   @Override
-  public Operator getOperator()
+  public String getOperator()
   {
     return operator;
   }
@@ -160,10 +159,10 @@ public class ValuableImpl extends DeclarationImpl implements Valuable
    * @generated
    */
   @Override
-  public void setOperator(Operator newOperator)
+  public void setOperator(String newOperator)
   {
-    Operator oldOperator = operator;
-    operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
+    String oldOperator = operator;
+    operator = newOperator;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__OPERATOR, oldOperator, operator));
   }
@@ -270,7 +269,7 @@ public class ValuableImpl extends DeclarationImpl implements Valuable
         setLeft((Valuable)newValue);
         return;
       case SelfiePackage.VALUABLE__OPERATOR:
-        setOperator((Operator)newValue);
+        setOperator((String)newValue);
         return;
       case SelfiePackage.VALUABLE__RIGHT:
         setRight((Valuable)newValue);
@@ -315,7 +314,7 @@ public class ValuableImpl extends DeclarationImpl implements Valuable
       case SelfiePackage.VALUABLE__LEFT:
         return left != null;
       case SelfiePackage.VALUABLE__OPERATOR:
-        return operator != OPERATOR_EDEFAULT;
+        return OPERATOR_EDEFAULT == null ? operator != null : !OPERATOR_EDEFAULT.equals(operator);
       case SelfiePackage.VALUABLE__RIGHT:
         return right != null;
     }

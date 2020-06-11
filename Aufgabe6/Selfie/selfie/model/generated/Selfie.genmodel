@@ -6,21 +6,18 @@
     copyrightFields="false" runtimeVersion="2.20">
   <genPackages prefix="Selfie" basePackage="org.xtext" disposableProviderFactory="true"
       fileExtensions="selfie" ecorePackage="Selfie.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Selfie.ecore#//Operator">
-      <genEnumLiterals ecoreEnumLiteral="Selfie.ecore#//Operator/PLUS"/>
-      <genEnumLiterals ecoreEnumLiteral="Selfie.ecore#//Operator/MINUS"/>
-      <genEnumLiterals ecoreEnumLiteral="Selfie.ecore#//Operator/TIMES"/>
-      <genEnumLiterals ecoreEnumLiteral="Selfie.ecore#//Operator/DIVIDED"/>
-    </genEnums>
     <genClasses ecoreClass="Selfie.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Selfie.ecore#//Model/expressions"/>
     </genClasses>
     <genClasses ecoreClass="Selfie.ecore#//Expression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Selfie.ecore#//Expression/variable"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Selfie.ecore#//Expression/valuable"/>
     </genClasses>
-    <genClasses ecoreClass="Selfie.ecore#//Declaration"/>
-    <genClasses ecoreClass="Selfie.ecore#//Assignment"/>
+    <genClasses ecoreClass="Selfie.ecore#//Declaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Selfie.ecore#//Declaration/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Selfie.ecore#//Assignment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Selfie.ecore#//Assignment/valuable"/>
+    </genClasses>
     <genClasses ecoreClass="Selfie.ecore#//Valuable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Selfie.ecore#//Valuable/left"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Selfie.ecore#//Valuable/operator"/>

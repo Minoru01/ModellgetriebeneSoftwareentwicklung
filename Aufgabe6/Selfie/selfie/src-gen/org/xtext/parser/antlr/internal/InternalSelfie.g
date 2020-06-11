@@ -23,7 +23,6 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -149,69 +148,56 @@ ruleDeclaration returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='def'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDeclarationAccess().getDefKeyword_0());
+		}
 		(
-			otherlv_0='def'
-			{
-				newLeafNode(otherlv_0, grammarAccess.getDeclarationAccess().getDefKeyword_0_0());
-			}
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getDeclarationAccess().getVariableVariableParserRuleCall_0_1_0());
+				{
+					newCompositeNode(grammarAccess.getDeclarationAccess().getVariableVariableParserRuleCall_1_0());
+				}
+				lv_variable_1_0=ruleVariable
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDeclarationRule());
 					}
-					lv_variable_1_0=ruleVariable
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDeclarationRule());
-						}
-						set(
-							$current,
-							"variable",
-							lv_variable_1_0,
-							"org.xtext.Selfie.Variable");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			otherlv_2=':'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getDeclarationAccess().getColonKeyword_0_2());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getDeclarationAccess().getValuableValuableParserRuleCall_0_3_0());
-					}
-					lv_valuable_3_0=ruleValuable
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDeclarationRule());
-						}
-						set(
-							$current,
-							"valuable",
-							lv_valuable_3_0,
-							"org.xtext.Selfie.Valuable");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"variable",
+						lv_variable_1_0,
+						"org.xtext.Selfie.Variable");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
-		    |
+		otherlv_2=':'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getDeclarationAccess().getColonKeyword_2());
+		}
 		(
-			{
-				newCompositeNode(grammarAccess.getDeclarationAccess().getCalculationParserRuleCall_1_0());
-			}
-			this_Calculation_4=ruleCalculation
-			{
-				$current = $this_Calculation_4.current;
-				afterParserOrEnumRuleCall();
-			}
-			otherlv_5=';'
-			{
-				newLeafNode(otherlv_5, grammarAccess.getDeclarationAccess().getSemicolonKeyword_1_1());
-			}
+			(
+				{
+					newCompositeNode(grammarAccess.getDeclarationAccess().getValueValueParserRuleCall_3_0());
+				}
+				lv_value_3_0=ruleValue
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDeclarationRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_3_0,
+						"org.xtext.Selfie.Value");
+					afterParserOrEnumRuleCall();
+				}
+			)
 		)
+		otherlv_4=';'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getDeclarationAccess().getSemicolonKeyword_4());
+		}
 	)
 ;
 
@@ -293,6 +279,40 @@ ruleAssignment returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleValue
+entryRuleValue returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getValueRule()); }
+	iv_ruleValue=ruleValue
+	{ $current=$iv_ruleValue.current.getText(); }
+	EOF;
+
+// Rule Value
+ruleValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_INTEGER_0=RULE_INTEGER
+		{
+			$current.merge(this_INTEGER_0);
+		}
+		{
+			newLeafNode(this_INTEGER_0, grammarAccess.getValueAccess().getINTEGERTerminalRuleCall_0());
+		}
+		    |
+		this_DOUBLE_1=RULE_DOUBLE
+		{
+			$current.merge(this_DOUBLE_1);
+		}
+		{
+			newLeafNode(this_DOUBLE_1, grammarAccess.getValueAccess().getDOUBLETerminalRuleCall_1());
+		}
+	)
+;
+
 // Entry rule entryRuleValuable
 entryRuleValuable returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getValuableRule()); }
@@ -343,23 +363,16 @@ ruleLiteral returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
 @after {
 	leaveRule();
 }:
-	(
-		this_INTEGER_0=RULE_INTEGER
-		{
-			$current.merge(this_INTEGER_0);
-		}
-		{
-			newLeafNode(this_INTEGER_0, grammarAccess.getLiteralAccess().getINTEGERTerminalRuleCall_0());
-		}
-		    |
-		this_DOUBLE_1=RULE_DOUBLE
-		{
-			$current.merge(this_DOUBLE_1);
-		}
-		{
-			newLeafNode(this_DOUBLE_1, grammarAccess.getLiteralAccess().getDOUBLETerminalRuleCall_1());
-		}
-	)
+	{
+		newCompositeNode(grammarAccess.getLiteralAccess().getValueParserRuleCall());
+	}
+	this_Value_0=ruleValue
+	{
+		$current.merge(this_Value_0);
+	}
+	{
+		afterParserOrEnumRuleCall();
+	}
 ;
 
 // Entry rule entryRuleVariable
@@ -433,6 +446,48 @@ ruleVariableRef returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleOperator
+entryRuleOperator returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getOperatorRule()); }
+	iv_ruleOperator=ruleOperator
+	{ $current=$iv_ruleOperator.current.getText(); }
+	EOF;
+
+// Rule Operator
+ruleOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		kw='+'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getOperatorAccess().getPlusSignKeyword_0());
+		}
+		    |
+		kw='-'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getOperatorAccess().getHyphenMinusKeyword_1());
+		}
+		    |
+		kw='*'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getOperatorAccess().getAsteriskKeyword_2());
+		}
+		    |
+		kw='/'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getOperatorAccess().getSolidusKeyword_3());
+		}
+	)
+;
+
 // Entry rule entryRuleCalculation
 entryRuleCalculation returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getCalculationRule()); }
@@ -472,7 +527,7 @@ ruleCalculation returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCalculationAccess().getOperatorOperatorEnumRuleCall_0_1_0());
+						newCompositeNode(grammarAccess.getCalculationAccess().getOperatorOperatorParserRuleCall_0_1_0());
 					}
 					lv_operator_1_0=ruleOperator
 					{
@@ -529,7 +584,7 @@ ruleCalculation returns [EObject current=null]
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getCalculationAccess().getOperatorOperatorEnumRuleCall_1_2_0_0());
+							newCompositeNode(grammarAccess.getCalculationAccess().getOperatorOperatorParserRuleCall_1_2_0_0());
 						}
 						lv_operator_5_0=ruleOperator
 						{
@@ -601,49 +656,6 @@ ruleParenthesizedExpression returns [EObject current=null]
 		{
 			newLeafNode(otherlv_2, grammarAccess.getParenthesizedExpressionAccess().getRightParenthesisKeyword_2());
 		}
-	)
-;
-
-// Rule Operator
-ruleOperator returns [Enumerator current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			enumLiteral_0='+'
-			{
-				$current = grammarAccess.getOperatorAccess().getPLUSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getOperatorAccess().getPLUSEnumLiteralDeclaration_0());
-			}
-		)
-		    |
-		(
-			enumLiteral_1='-'
-			{
-				$current = grammarAccess.getOperatorAccess().getMINUSEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getOperatorAccess().getMINUSEnumLiteralDeclaration_1());
-			}
-		)
-		    |
-		(
-			enumLiteral_2='*'
-			{
-				$current = grammarAccess.getOperatorAccess().getTIMESEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getOperatorAccess().getTIMESEnumLiteralDeclaration_2());
-			}
-		)
-		    |
-		(
-			enumLiteral_3='/'
-			{
-				$current = grammarAccess.getOperatorAccess().getDIVIDEDEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_3, grammarAccess.getOperatorAccess().getDIVIDEDEnumLiteralDeclaration_3());
-			}
-		)
 	)
 ;
 

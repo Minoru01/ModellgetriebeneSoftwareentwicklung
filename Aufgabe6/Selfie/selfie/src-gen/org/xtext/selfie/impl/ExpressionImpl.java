@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.selfie.Expression;
 import org.xtext.selfie.SelfiePackage;
-import org.xtext.selfie.Valuable;
 import org.xtext.selfie.Variable;
 
 /**
@@ -26,7 +25,6 @@ import org.xtext.selfie.Variable;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.selfie.impl.ExpressionImpl#getVariable <em>Variable</em>}</li>
- *   <li>{@link org.xtext.selfie.impl.ExpressionImpl#getValuable <em>Valuable</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,16 +40,6 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * @ordered
    */
   protected Variable variable;
-
-  /**
-   * The cached value of the '{@link #getValuable() <em>Valuable</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getValuable()
-   * @generated
-   * @ordered
-   */
-  protected Valuable valuable;
 
   /**
    * <!-- begin-user-doc -->
@@ -130,64 +118,12 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
    * @generated
    */
   @Override
-  public Valuable getValuable()
-  {
-    return valuable;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetValuable(Valuable newValuable, NotificationChain msgs)
-  {
-    Valuable oldValuable = valuable;
-    valuable = newValuable;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SelfiePackage.EXPRESSION__VALUABLE, oldValuable, newValuable);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setValuable(Valuable newValuable)
-  {
-    if (newValuable != valuable)
-    {
-      NotificationChain msgs = null;
-      if (valuable != null)
-        msgs = ((InternalEObject)valuable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.EXPRESSION__VALUABLE, null, msgs);
-      if (newValuable != null)
-        msgs = ((InternalEObject)newValuable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.EXPRESSION__VALUABLE, null, msgs);
-      msgs = basicSetValuable(newValuable, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SelfiePackage.EXPRESSION__VALUABLE, newValuable, newValuable));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
       case SelfiePackage.EXPRESSION__VARIABLE:
         return basicSetVariable(null, msgs);
-      case SelfiePackage.EXPRESSION__VALUABLE:
-        return basicSetValuable(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -204,8 +140,6 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
     {
       case SelfiePackage.EXPRESSION__VARIABLE:
         return getVariable();
-      case SelfiePackage.EXPRESSION__VALUABLE:
-        return getValuable();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -222,9 +156,6 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
     {
       case SelfiePackage.EXPRESSION__VARIABLE:
         setVariable((Variable)newValue);
-        return;
-      case SelfiePackage.EXPRESSION__VALUABLE:
-        setValuable((Valuable)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -243,9 +174,6 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
       case SelfiePackage.EXPRESSION__VARIABLE:
         setVariable((Variable)null);
         return;
-      case SelfiePackage.EXPRESSION__VALUABLE:
-        setValuable((Valuable)null);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -262,8 +190,6 @@ public class ExpressionImpl extends MinimalEObjectImpl.Container implements Expr
     {
       case SelfiePackage.EXPRESSION__VARIABLE:
         return variable != null;
-      case SelfiePackage.EXPRESSION__VALUABLE:
-        return valuable != null;
     }
     return super.eIsSet(featureID);
   }

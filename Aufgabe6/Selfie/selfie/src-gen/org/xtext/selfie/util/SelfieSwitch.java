@@ -107,7 +107,6 @@ public class SelfieSwitch<T> extends Switch<T>
       {
         Valuable valuable = (Valuable)theEObject;
         T result = caseValuable(valuable);
-        if (result == null) result = caseDeclaration(valuable);
         if (result == null) result = caseAssignment(valuable);
         if (result == null) result = caseExpression(valuable);
         if (result == null) result = defaultCase(theEObject);
@@ -125,7 +124,6 @@ public class SelfieSwitch<T> extends Switch<T>
         VariableRef variableRef = (VariableRef)theEObject;
         T result = caseVariableRef(variableRef);
         if (result == null) result = caseValuable(variableRef);
-        if (result == null) result = caseDeclaration(variableRef);
         if (result == null) result = caseAssignment(variableRef);
         if (result == null) result = caseExpression(variableRef);
         if (result == null) result = defaultCase(theEObject);
@@ -136,7 +134,6 @@ public class SelfieSwitch<T> extends Switch<T>
         Calculation calculation = (Calculation)theEObject;
         T result = caseCalculation(calculation);
         if (result == null) result = caseValuable(calculation);
-        if (result == null) result = caseDeclaration(calculation);
         if (result == null) result = caseAssignment(calculation);
         if (result == null) result = caseExpression(calculation);
         if (result == null) result = defaultCase(theEObject);

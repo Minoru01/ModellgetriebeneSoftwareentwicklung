@@ -9,8 +9,6 @@ import java.util.List;
 import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
-import org.eclipse.xtext.EnumLiteralDeclaration;
-import org.eclipse.xtext.EnumRule;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
@@ -19,7 +17,6 @@ import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.TerminalRule;
 import org.eclipse.xtext.common.services.TerminalsGrammarAccess;
-import org.eclipse.xtext.service.AbstractElementFinder.AbstractEnumRuleElementFinder;
 import org.eclipse.xtext.service.AbstractElementFinder.AbstractGrammarElementFinder;
 import org.eclipse.xtext.service.GrammarProvider;
 
@@ -62,54 +59,42 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class DeclarationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.Declaration");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cDefKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cVariableAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cVariableVariableParserRuleCall_0_1_0 = (RuleCall)cVariableAssignment_0_1.eContents().get(0);
-		private final Keyword cColonKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Assignment cValuableAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
-		private final RuleCall cValuableValuableParserRuleCall_0_3_0 = (RuleCall)cValuableAssignment_0_3.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final RuleCall cCalculationParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cDefKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cVariableAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cVariableVariableParserRuleCall_1_0 = (RuleCall)cVariableAssignment_1.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValueValueParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Declaration:
-		//	'def' variable=Variable ':' valuable=Valuable | Calculation ';';
+		//	'def' variable=Variable ':' value=Value ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'def' variable=Variable ':' valuable=Valuable | Calculation ';'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//'def' variable=Variable ':' valuable=Valuable
-		public Group getGroup_0() { return cGroup_0; }
+		//'def' variable=Variable ':' value=Value ';'
+		public Group getGroup() { return cGroup; }
 		
 		//'def'
-		public Keyword getDefKeyword_0_0() { return cDefKeyword_0_0; }
+		public Keyword getDefKeyword_0() { return cDefKeyword_0; }
 		
 		//variable=Variable
-		public Assignment getVariableAssignment_0_1() { return cVariableAssignment_0_1; }
+		public Assignment getVariableAssignment_1() { return cVariableAssignment_1; }
 		
 		//Variable
-		public RuleCall getVariableVariableParserRuleCall_0_1_0() { return cVariableVariableParserRuleCall_0_1_0; }
+		public RuleCall getVariableVariableParserRuleCall_1_0() { return cVariableVariableParserRuleCall_1_0; }
 		
 		//':'
-		public Keyword getColonKeyword_0_2() { return cColonKeyword_0_2; }
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 		
-		//valuable=Valuable
-		public Assignment getValuableAssignment_0_3() { return cValuableAssignment_0_3; }
+		//value=Value
+		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
 		
-		//Valuable
-		public RuleCall getValuableValuableParserRuleCall_0_3_0() { return cValuableValuableParserRuleCall_0_3_0; }
-		
-		//Calculation ';'
-		public Group getGroup_1() { return cGroup_1; }
-		
-		//Calculation
-		public RuleCall getCalculationParserRuleCall_1_0() { return cCalculationParserRuleCall_1_0; }
+		//Value
+		public RuleCall getValueValueParserRuleCall_3_0() { return cValueValueParserRuleCall_3_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_1_1() { return cSemicolonKeyword_1_1; }
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
 	public class AssignmentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.Assignment");
@@ -158,6 +143,25 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_1_1() { return cSemicolonKeyword_1_1; }
 	}
+	public class ValueElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.Value");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cINTEGERTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cDOUBLETerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Value:
+		//	INTEGER | DOUBLE;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//INTEGER | DOUBLE
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//INTEGER
+		public RuleCall getINTEGERTerminalRuleCall_0() { return cINTEGERTerminalRuleCall_0; }
+		
+		//DOUBLE
+		public RuleCall getDOUBLETerminalRuleCall_1() { return cDOUBLETerminalRuleCall_1; }
+	}
 	public class ValuableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.Valuable");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -179,22 +183,14 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class LiteralElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.Literal");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cINTEGERTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cDOUBLETerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cValueParserRuleCall = (RuleCall)rule.eContents().get(1);
 		
 		//Literal:
-		//	INTEGER | DOUBLE;
+		//	Value;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//INTEGER | DOUBLE
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//INTEGER
-		public RuleCall getINTEGERTerminalRuleCall_0() { return cINTEGERTerminalRuleCall_0; }
-		
-		//DOUBLE
-		public RuleCall getDOUBLETerminalRuleCall_1() { return cDOUBLETerminalRuleCall_1; }
+		//Value
+		public RuleCall getValueParserRuleCall() { return cValueParserRuleCall; }
 	}
 	public class VariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.Variable");
@@ -226,6 +222,33 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		//Variable
 		public RuleCall getVariableVariableParserRuleCall_0() { return cVariableVariableParserRuleCall_0; }
 	}
+	public class OperatorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.Operator");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cPlusSignKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cHyphenMinusKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cAsteriskKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		private final Keyword cSolidusKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		
+		//Operator:
+		//	'+' | '-' | '*' | '/';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'+' | '-' | '*' | '/'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//'+'
+		public Keyword getPlusSignKeyword_0() { return cPlusSignKeyword_0; }
+		
+		//'-'
+		public Keyword getHyphenMinusKeyword_1() { return cHyphenMinusKeyword_1; }
+		
+		//'*'
+		public Keyword getAsteriskKeyword_2() { return cAsteriskKeyword_2; }
+		
+		//'/'
+		public Keyword getSolidusKeyword_3() { return cSolidusKeyword_3; }
+	}
 	public class CalculationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.Calculation");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -233,7 +256,7 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cLeftAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
 		private final RuleCall cLeftValuableParserRuleCall_0_0_0 = (RuleCall)cLeftAssignment_0_0.eContents().get(0);
 		private final Assignment cOperatorAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cOperatorOperatorEnumRuleCall_0_1_0 = (RuleCall)cOperatorAssignment_0_1.eContents().get(0);
+		private final RuleCall cOperatorOperatorParserRuleCall_0_1_0 = (RuleCall)cOperatorAssignment_0_1.eContents().get(0);
 		private final Assignment cRightAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
 		private final RuleCall cRightValuableParserRuleCall_0_2_0 = (RuleCall)cRightAssignment_0_2.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
@@ -241,7 +264,7 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cCalculationLeftAction_1_1 = (Action)cGroup_1.eContents().get(1);
 		private final Group cGroup_1_2 = (Group)cGroup_1.eContents().get(2);
 		private final Assignment cOperatorAssignment_1_2_0 = (Assignment)cGroup_1_2.eContents().get(0);
-		private final RuleCall cOperatorOperatorEnumRuleCall_1_2_0_0 = (RuleCall)cOperatorAssignment_1_2_0.eContents().get(0);
+		private final RuleCall cOperatorOperatorParserRuleCall_1_2_0_0 = (RuleCall)cOperatorAssignment_1_2_0.eContents().get(0);
 		private final Assignment cRightAssignment_1_2_1 = (Assignment)cGroup_1_2.eContents().get(1);
 		private final RuleCall cRightValuableParserRuleCall_1_2_1_0 = (RuleCall)cRightAssignment_1_2_1.eContents().get(0);
 		
@@ -267,7 +290,7 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		public Assignment getOperatorAssignment_0_1() { return cOperatorAssignment_0_1; }
 		
 		//Operator
-		public RuleCall getOperatorOperatorEnumRuleCall_0_1_0() { return cOperatorOperatorEnumRuleCall_0_1_0; }
+		public RuleCall getOperatorOperatorParserRuleCall_0_1_0() { return cOperatorOperatorParserRuleCall_0_1_0; }
 		
 		//right=Valuable
 		public Assignment getRightAssignment_0_2() { return cRightAssignment_0_2; }
@@ -291,7 +314,7 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		public Assignment getOperatorAssignment_1_2_0() { return cOperatorAssignment_1_2_0; }
 		
 		//Operator
-		public RuleCall getOperatorOperatorEnumRuleCall_1_2_0_0() { return cOperatorOperatorEnumRuleCall_1_2_0_0; }
+		public RuleCall getOperatorOperatorParserRuleCall_1_2_0_0() { return cOperatorOperatorParserRuleCall_1_2_0_0; }
 		
 		//right=Valuable
 		public Assignment getRightAssignment_1_2_1() { return cRightAssignment_1_2_1; }
@@ -323,61 +346,19 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
 	}
 	
-	public class OperatorElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.Operator");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cPLUSEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cPLUSPlusSignKeyword_0_0 = (Keyword)cPLUSEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cMINUSEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cMINUSHyphenMinusKeyword_1_0 = (Keyword)cMINUSEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cTIMESEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cTIMESAsteriskKeyword_2_0 = (Keyword)cTIMESEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cDIVIDEDEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cDIVIDEDSolidusKeyword_3_0 = (Keyword)cDIVIDEDEnumLiteralDeclaration_3.eContents().get(0);
-		
-		//enum Operator:
-		//	PLUS='+' | MINUS='-' | TIMES='*' | DIVIDED='/';
-		public EnumRule getRule() { return rule; }
-		
-		//PLUS='+' | MINUS='-' | TIMES='*' | DIVIDED='/'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//PLUS='+'
-		public EnumLiteralDeclaration getPLUSEnumLiteralDeclaration_0() { return cPLUSEnumLiteralDeclaration_0; }
-		
-		//'+'
-		public Keyword getPLUSPlusSignKeyword_0_0() { return cPLUSPlusSignKeyword_0_0; }
-		
-		//MINUS='-'
-		public EnumLiteralDeclaration getMINUSEnumLiteralDeclaration_1() { return cMINUSEnumLiteralDeclaration_1; }
-		
-		//'-'
-		public Keyword getMINUSHyphenMinusKeyword_1_0() { return cMINUSHyphenMinusKeyword_1_0; }
-		
-		//TIMES='*'
-		public EnumLiteralDeclaration getTIMESEnumLiteralDeclaration_2() { return cTIMESEnumLiteralDeclaration_2; }
-		
-		//'*'
-		public Keyword getTIMESAsteriskKeyword_2_0() { return cTIMESAsteriskKeyword_2_0; }
-		
-		//DIVIDED='/'
-		public EnumLiteralDeclaration getDIVIDEDEnumLiteralDeclaration_3() { return cDIVIDEDEnumLiteralDeclaration_3; }
-		
-		//'/'
-		public Keyword getDIVIDEDSolidusKeyword_3_0() { return cDIVIDEDSolidusKeyword_3_0; }
-	}
 	
 	private final ModelElements pModel;
 	private final ExpressionElements pExpression;
 	private final DeclarationElements pDeclaration;
 	private final AssignmentElements pAssignment;
+	private final ValueElements pValue;
 	private final ValuableElements pValuable;
 	private final LiteralElements pLiteral;
 	private final TerminalRule tINTEGER;
 	private final TerminalRule tDOUBLE;
 	private final VariableElements pVariable;
 	private final VariableRefElements pVariableRef;
-	private final OperatorElements eOperator;
+	private final OperatorElements pOperator;
 	private final CalculationElements pCalculation;
 	private final ParenthesizedExpressionElements pParenthesizedExpression;
 	
@@ -394,13 +375,14 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		this.pExpression = new ExpressionElements();
 		this.pDeclaration = new DeclarationElements();
 		this.pAssignment = new AssignmentElements();
+		this.pValue = new ValueElements();
 		this.pValuable = new ValuableElements();
 		this.pLiteral = new LiteralElements();
 		this.tINTEGER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.INTEGER");
 		this.tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.Selfie.DOUBLE");
 		this.pVariable = new VariableElements();
 		this.pVariableRef = new VariableRefElements();
-		this.eOperator = new OperatorElements();
+		this.pOperator = new OperatorElements();
 		this.pCalculation = new CalculationElements();
 		this.pParenthesizedExpression = new ParenthesizedExpressionElements();
 	}
@@ -453,7 +435,7 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Declaration:
-	//	'def' variable=Variable ':' valuable=Valuable | Calculation ';';
+	//	'def' variable=Variable ':' value=Value ';';
 	public DeclarationElements getDeclarationAccess() {
 		return pDeclaration;
 	}
@@ -472,6 +454,16 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		return getAssignmentAccess().getRule();
 	}
 	
+	//Value:
+	//	INTEGER | DOUBLE;
+	public ValueElements getValueAccess() {
+		return pValue;
+	}
+	
+	public ParserRule getValueRule() {
+		return getValueAccess().getRule();
+	}
+	
 	//Valuable:
 	//	Literal | VariableRef;
 	public ValuableElements getValuableAccess() {
@@ -483,7 +475,7 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Literal:
-	//	INTEGER | DOUBLE;
+	//	Value;
 	public LiteralElements getLiteralAccess() {
 		return pLiteral;
 	}
@@ -524,13 +516,13 @@ public class SelfieGrammarAccess extends AbstractGrammarElementFinder {
 		return getVariableRefAccess().getRule();
 	}
 	
-	//enum Operator:
-	//	PLUS='+' | MINUS='-' | TIMES='*' | DIVIDED='/';
+	//Operator:
+	//	'+' | '-' | '*' | '/';
 	public OperatorElements getOperatorAccess() {
-		return eOperator;
+		return pOperator;
 	}
 	
-	public EnumRule getOperatorRule() {
+	public ParserRule getOperatorRule() {
 		return getOperatorAccess().getRule();
 	}
 	

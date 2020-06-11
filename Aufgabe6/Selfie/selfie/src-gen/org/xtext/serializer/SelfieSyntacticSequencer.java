@@ -33,7 +33,7 @@ public class SelfieSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Literal:
-	 * 	INTEGER|DOUBLE;
+	 * 	Value;
 	 */
 	protected String getLiteralToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)

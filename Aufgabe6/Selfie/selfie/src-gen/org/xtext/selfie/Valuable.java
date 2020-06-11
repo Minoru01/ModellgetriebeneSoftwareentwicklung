@@ -22,7 +22,7 @@ package org.xtext.selfie;
  * @model
  * @generated
  */
-public interface Valuable extends Declaration, Assignment
+public interface Valuable extends Assignment
 {
   /**
    * Returns the value of the '<em><b>Left</b></em>' containment reference.
@@ -48,28 +48,25 @@ public interface Valuable extends Declaration, Assignment
 
   /**
    * Returns the value of the '<em><b>Operator</b></em>' attribute.
-   * The literals are from the enumeration {@link org.xtext.selfie.Operator}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Operator</em>' attribute.
-   * @see org.xtext.selfie.Operator
-   * @see #setOperator(Operator)
+   * @see #setOperator(String)
    * @see org.xtext.selfie.SelfiePackage#getValuable_Operator()
    * @model
    * @generated
    */
-  Operator getOperator();
+  String getOperator();
 
   /**
    * Sets the value of the '{@link org.xtext.selfie.Valuable#getOperator <em>Operator</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Operator</em>' attribute.
-   * @see org.xtext.selfie.Operator
    * @see #getOperator()
    * @generated
    */
-  void setOperator(Operator value);
+  void setOperator(String value);
 
   /**
    * Returns the value of the '<em><b>Right</b></em>' containment reference.

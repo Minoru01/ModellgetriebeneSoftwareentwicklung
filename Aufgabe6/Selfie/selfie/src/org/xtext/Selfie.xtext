@@ -10,15 +10,18 @@ Expression:
 	Declaration | Assignment;
 	
 Declaration: 
-	'def' variable=Variable ':' valuable=Valuable| Calculation ';';
+	'def' variable=Variable ':' value=Value ';';
 
 Assignment:
 	variable=Variable ':=' valuable=Valuable | Calculation ';';
 
 Valuable:
-	Literal|VariableRef;
+	Literal|VariableRef|Calculation;
 		
 Literal:
+	Value;	
+	
+Value:
 	INTEGER|DOUBLE;
 	
 terminal INTEGER returns ecore::EInt:
@@ -33,12 +36,12 @@ Variable:
 VariableRef:
 	variable=Variable;
 	
-enum Operator:
-	PLUS = '+'| MINUS = '-'| TIMES = '*'| DIVIDED = '/';
+Operator:
+	'+'|'-'|'*'|'/';
 		
 Calculation returns Valuable:
-    left=Valuable operator=Operator right=Valuable |
-    ParenthesizedExpression {Calculation.left=current} (operator=Operator right=Valuable)?;
+    leftValue=(Literal|VariableRef) operator=Operator rightValue=Valuable |
+    ParenthesizedExpression {Calculation.leftValue=current} (operator=Operator rightValue=Valuable)?;
     
 ParenthesizedExpression returns Valuable:
     '(' Calculation ')';	
