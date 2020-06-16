@@ -4,7 +4,7 @@ generate zustandsdiagramm "http://www.xtext.org/example/mydsl/Zustandsdiagramm"
 
 Model:
 	initialState += InitialState &
-	finalState += FinalState &
+	finalState += FinalState* &
 	genericState += GenericState*;
 	
 TargetableState:

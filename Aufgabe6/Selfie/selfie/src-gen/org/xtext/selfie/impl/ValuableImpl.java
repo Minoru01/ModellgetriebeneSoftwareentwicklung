@@ -10,7 +10,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.xtext.selfie.Operator;
 import org.xtext.selfie.SelfiePackage;
 import org.xtext.selfie.Valuable;
 
@@ -22,24 +24,24 @@ import org.xtext.selfie.Valuable;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.selfie.impl.ValuableImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link org.xtext.selfie.impl.ValuableImpl#getLeftValue <em>Left Value</em>}</li>
  *   <li>{@link org.xtext.selfie.impl.ValuableImpl#getOperator <em>Operator</em>}</li>
- *   <li>{@link org.xtext.selfie.impl.ValuableImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link org.xtext.selfie.impl.ValuableImpl#getRightValue <em>Right Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ValuableImpl extends AssignmentImpl implements Valuable
+public class ValuableImpl extends MinimalEObjectImpl.Container implements Valuable
 {
   /**
-   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
+   * The cached value of the '{@link #getLeftValue() <em>Left Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLeft()
+   * @see #getLeftValue()
    * @generated
    * @ordered
    */
-  protected Valuable left;
+  protected Valuable leftValue;
 
   /**
    * The default value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -49,7 +51,7 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * @generated
    * @ordered
    */
-  protected static final String OPERATOR_EDEFAULT = null;
+  protected static final Operator OPERATOR_EDEFAULT = Operator.PLUS;
 
   /**
    * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
@@ -59,17 +61,17 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * @generated
    * @ordered
    */
-  protected String operator = OPERATOR_EDEFAULT;
+  protected Operator operator = OPERATOR_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
+   * The cached value of the '{@link #getRightValue() <em>Right Value</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRight()
+   * @see #getRightValue()
    * @generated
    * @ordered
    */
-  protected Valuable right;
+  protected Valuable rightValue;
 
   /**
    * <!-- begin-user-doc -->
@@ -98,9 +100,9 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * @generated
    */
   @Override
-  public Valuable getLeft()
+  public Valuable getLeftValue()
   {
-    return left;
+    return leftValue;
   }
 
   /**
@@ -108,13 +110,13 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLeft(Valuable newLeft, NotificationChain msgs)
+  public NotificationChain basicSetLeftValue(Valuable newLeftValue, NotificationChain msgs)
   {
-    Valuable oldLeft = left;
-    left = newLeft;
+    Valuable oldLeftValue = leftValue;
+    leftValue = newLeftValue;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__LEFT, oldLeft, newLeft);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__LEFT_VALUE, oldLeftValue, newLeftValue);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -126,20 +128,20 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * @generated
    */
   @Override
-  public void setLeft(Valuable newLeft)
+  public void setLeftValue(Valuable newLeftValue)
   {
-    if (newLeft != left)
+    if (newLeftValue != leftValue)
     {
       NotificationChain msgs = null;
-      if (left != null)
-        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.VALUABLE__LEFT, null, msgs);
-      if (newLeft != null)
-        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.VALUABLE__LEFT, null, msgs);
-      msgs = basicSetLeft(newLeft, msgs);
+      if (leftValue != null)
+        msgs = ((InternalEObject)leftValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.VALUABLE__LEFT_VALUE, null, msgs);
+      if (newLeftValue != null)
+        msgs = ((InternalEObject)newLeftValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.VALUABLE__LEFT_VALUE, null, msgs);
+      msgs = basicSetLeftValue(newLeftValue, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__LEFT, newLeft, newLeft));
+      eNotify(new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__LEFT_VALUE, newLeftValue, newLeftValue));
   }
 
   /**
@@ -148,7 +150,7 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * @generated
    */
   @Override
-  public String getOperator()
+  public Operator getOperator()
   {
     return operator;
   }
@@ -159,10 +161,10 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * @generated
    */
   @Override
-  public void setOperator(String newOperator)
+  public void setOperator(Operator newOperator)
   {
-    String oldOperator = operator;
-    operator = newOperator;
+    Operator oldOperator = operator;
+    operator = newOperator == null ? OPERATOR_EDEFAULT : newOperator;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__OPERATOR, oldOperator, operator));
   }
@@ -173,9 +175,9 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * @generated
    */
   @Override
-  public Valuable getRight()
+  public Valuable getRightValue()
   {
-    return right;
+    return rightValue;
   }
 
   /**
@@ -183,13 +185,13 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetRight(Valuable newRight, NotificationChain msgs)
+  public NotificationChain basicSetRightValue(Valuable newRightValue, NotificationChain msgs)
   {
-    Valuable oldRight = right;
-    right = newRight;
+    Valuable oldRightValue = rightValue;
+    rightValue = newRightValue;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__RIGHT, oldRight, newRight);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__RIGHT_VALUE, oldRightValue, newRightValue);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -201,20 +203,20 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
    * @generated
    */
   @Override
-  public void setRight(Valuable newRight)
+  public void setRightValue(Valuable newRightValue)
   {
-    if (newRight != right)
+    if (newRightValue != rightValue)
     {
       NotificationChain msgs = null;
-      if (right != null)
-        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.VALUABLE__RIGHT, null, msgs);
-      if (newRight != null)
-        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.VALUABLE__RIGHT, null, msgs);
-      msgs = basicSetRight(newRight, msgs);
+      if (rightValue != null)
+        msgs = ((InternalEObject)rightValue).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.VALUABLE__RIGHT_VALUE, null, msgs);
+      if (newRightValue != null)
+        msgs = ((InternalEObject)newRightValue).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - SelfiePackage.VALUABLE__RIGHT_VALUE, null, msgs);
+      msgs = basicSetRightValue(newRightValue, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__RIGHT, newRight, newRight));
+      eNotify(new ENotificationImpl(this, Notification.SET, SelfiePackage.VALUABLE__RIGHT_VALUE, newRightValue, newRightValue));
   }
 
   /**
@@ -227,10 +229,10 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
   {
     switch (featureID)
     {
-      case SelfiePackage.VALUABLE__LEFT:
-        return basicSetLeft(null, msgs);
-      case SelfiePackage.VALUABLE__RIGHT:
-        return basicSetRight(null, msgs);
+      case SelfiePackage.VALUABLE__LEFT_VALUE:
+        return basicSetLeftValue(null, msgs);
+      case SelfiePackage.VALUABLE__RIGHT_VALUE:
+        return basicSetRightValue(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -245,12 +247,12 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
   {
     switch (featureID)
     {
-      case SelfiePackage.VALUABLE__LEFT:
-        return getLeft();
+      case SelfiePackage.VALUABLE__LEFT_VALUE:
+        return getLeftValue();
       case SelfiePackage.VALUABLE__OPERATOR:
         return getOperator();
-      case SelfiePackage.VALUABLE__RIGHT:
-        return getRight();
+      case SelfiePackage.VALUABLE__RIGHT_VALUE:
+        return getRightValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -265,14 +267,14 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
   {
     switch (featureID)
     {
-      case SelfiePackage.VALUABLE__LEFT:
-        setLeft((Valuable)newValue);
+      case SelfiePackage.VALUABLE__LEFT_VALUE:
+        setLeftValue((Valuable)newValue);
         return;
       case SelfiePackage.VALUABLE__OPERATOR:
-        setOperator((String)newValue);
+        setOperator((Operator)newValue);
         return;
-      case SelfiePackage.VALUABLE__RIGHT:
-        setRight((Valuable)newValue);
+      case SelfiePackage.VALUABLE__RIGHT_VALUE:
+        setRightValue((Valuable)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -288,14 +290,14 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
   {
     switch (featureID)
     {
-      case SelfiePackage.VALUABLE__LEFT:
-        setLeft((Valuable)null);
+      case SelfiePackage.VALUABLE__LEFT_VALUE:
+        setLeftValue((Valuable)null);
         return;
       case SelfiePackage.VALUABLE__OPERATOR:
         setOperator(OPERATOR_EDEFAULT);
         return;
-      case SelfiePackage.VALUABLE__RIGHT:
-        setRight((Valuable)null);
+      case SelfiePackage.VALUABLE__RIGHT_VALUE:
+        setRightValue((Valuable)null);
         return;
     }
     super.eUnset(featureID);
@@ -311,12 +313,12 @@ public class ValuableImpl extends AssignmentImpl implements Valuable
   {
     switch (featureID)
     {
-      case SelfiePackage.VALUABLE__LEFT:
-        return left != null;
+      case SelfiePackage.VALUABLE__LEFT_VALUE:
+        return leftValue != null;
       case SelfiePackage.VALUABLE__OPERATOR:
-        return OPERATOR_EDEFAULT == null ? operator != null : !OPERATOR_EDEFAULT.equals(operator);
-      case SelfiePackage.VALUABLE__RIGHT:
-        return right != null;
+        return operator != OPERATOR_EDEFAULT;
+      case SelfiePackage.VALUABLE__RIGHT_VALUE:
+        return rightValue != null;
     }
     return super.eIsSet(featureID);
   }

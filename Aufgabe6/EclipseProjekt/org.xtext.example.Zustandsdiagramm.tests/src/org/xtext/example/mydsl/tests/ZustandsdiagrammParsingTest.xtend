@@ -20,10 +20,13 @@ class ZustandsdiagrammParsingTest {
 	
 	@Test
 	def void loadModel() {
-		val result = parseHelper.parse('''
-			initialState: initialState1 with event: event1 and guard: hello to genericState1;			
-			genericState: genericState1 with event: event2 to finalState1;
-			finalState: finalState1;			
+		val result = parseHelper.parse('''			
+			initialState: aus with event: stromEin to gruen;		
+			genericState: gruen with event: timerAblauf to gelb;
+			genericState: gelb with event: timerAblauf to rot;
+			genericState: rot with event: timerAblauf and guard: keineAmpelGruen to rotGelb;	
+			genericState: rotGelb with event: timerAblauf to gruen;	
+			finalState: aus;	
 		''')
 		Assertions.assertNotNull(result)
 		val errors = result.eResource.errors

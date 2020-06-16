@@ -107,8 +107,23 @@ public class SelfieSwitch<T> extends Switch<T>
       {
         Valuable valuable = (Valuable)theEObject;
         T result = caseValuable(valuable);
-        if (result == null) result = caseAssignment(valuable);
-        if (result == null) result = caseExpression(valuable);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SelfiePackage.LITERAL:
+      {
+        Literal literal = (Literal)theEObject;
+        T result = caseLiteral(literal);
+        if (result == null) result = caseValuable(literal);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case SelfiePackage.VALUE:
+      {
+        Value value = (Value)theEObject;
+        T result = caseValue(value);
+        if (result == null) result = caseLiteral(value);
+        if (result == null) result = caseValuable(value);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -124,8 +139,6 @@ public class SelfieSwitch<T> extends Switch<T>
         VariableRef variableRef = (VariableRef)theEObject;
         T result = caseVariableRef(variableRef);
         if (result == null) result = caseValuable(variableRef);
-        if (result == null) result = caseAssignment(variableRef);
-        if (result == null) result = caseExpression(variableRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -134,8 +147,6 @@ public class SelfieSwitch<T> extends Switch<T>
         Calculation calculation = (Calculation)theEObject;
         T result = caseCalculation(calculation);
         if (result == null) result = caseValuable(calculation);
-        if (result == null) result = caseAssignment(calculation);
-        if (result == null) result = caseExpression(calculation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -219,6 +230,38 @@ public class SelfieSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseValuable(Valuable object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Literal</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Literal</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLiteral(Literal object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseValue(Value object)
   {
     return null;
   }

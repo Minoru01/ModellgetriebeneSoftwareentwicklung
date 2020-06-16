@@ -5,6 +5,7 @@ package org.xtext.selfie;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -105,13 +106,22 @@ public interface SelfiePackage extends EPackage
   int EXPRESSION__VARIABLE = 0;
 
   /**
+   * The feature id for the '<em><b>Valuable</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXPRESSION__VALUABLE = 1;
+
+  /**
    * The number of structural features of the '<em>Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXPRESSION_FEATURE_COUNT = 1;
+  int EXPRESSION_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.selfie.impl.DeclarationImpl <em>Declaration</em>}' class.
@@ -133,13 +143,13 @@ public interface SelfiePackage extends EPackage
   int DECLARATION__VARIABLE = EXPRESSION__VARIABLE;
 
   /**
-   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * The feature id for the '<em><b>Valuable</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DECLARATION__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+  int DECLARATION__VALUABLE = EXPRESSION__VALUABLE;
 
   /**
    * The number of structural features of the '<em>Declaration</em>' class.
@@ -148,7 +158,7 @@ public interface SelfiePackage extends EPackage
    * @generated
    * @ordered
    */
-  int DECLARATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int DECLARATION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.selfie.impl.AssignmentImpl <em>Assignment</em>}' class.
@@ -176,7 +186,7 @@ public interface SelfiePackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSIGNMENT__VALUABLE = EXPRESSION_FEATURE_COUNT + 0;
+  int ASSIGNMENT__VALUABLE = EXPRESSION__VALUABLE;
 
   /**
    * The number of structural features of the '<em>Assignment</em>' class.
@@ -185,7 +195,7 @@ public interface SelfiePackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSIGNMENT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+  int ASSIGNMENT_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.selfie.impl.ValuableImpl <em>Valuable</em>}' class.
@@ -198,31 +208,13 @@ public interface SelfiePackage extends EPackage
   int VALUABLE = 4;
 
   /**
-   * The feature id for the '<em><b>Variable</b></em>' containment reference.
+   * The feature id for the '<em><b>Left Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VALUABLE__VARIABLE = ASSIGNMENT__VARIABLE;
-
-  /**
-   * The feature id for the '<em><b>Valuable</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VALUABLE__VALUABLE = ASSIGNMENT__VALUABLE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VALUABLE__LEFT = ASSIGNMENT_FEATURE_COUNT + 0;
+  int VALUABLE__LEFT_VALUE = 0;
 
   /**
    * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -231,16 +223,16 @@ public interface SelfiePackage extends EPackage
    * @generated
    * @ordered
    */
-  int VALUABLE__OPERATOR = ASSIGNMENT_FEATURE_COUNT + 1;
+  int VALUABLE__OPERATOR = 1;
 
   /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * The feature id for the '<em><b>Right Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VALUABLE__RIGHT = ASSIGNMENT_FEATURE_COUNT + 2;
+  int VALUABLE__RIGHT_VALUE = 2;
 
   /**
    * The number of structural features of the '<em>Valuable</em>' class.
@@ -249,7 +241,117 @@ public interface SelfiePackage extends EPackage
    * @generated
    * @ordered
    */
-  int VALUABLE_FEATURE_COUNT = ASSIGNMENT_FEATURE_COUNT + 3;
+  int VALUABLE_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.selfie.impl.LiteralImpl <em>Literal</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.selfie.impl.LiteralImpl
+   * @see org.xtext.selfie.impl.SelfiePackageImpl#getLiteral()
+   * @generated
+   */
+  int LITERAL = 5;
+
+  /**
+   * The feature id for the '<em><b>Left Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__LEFT_VALUE = VALUABLE__LEFT_VALUE;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__OPERATOR = VALUABLE__OPERATOR;
+
+  /**
+   * The feature id for the '<em><b>Right Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL__RIGHT_VALUE = VALUABLE__RIGHT_VALUE;
+
+  /**
+   * The number of structural features of the '<em>Literal</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LITERAL_FEATURE_COUNT = VALUABLE_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.selfie.impl.ValueImpl <em>Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.selfie.impl.ValueImpl
+   * @see org.xtext.selfie.impl.SelfiePackageImpl#getValue()
+   * @generated
+   */
+  int VALUE = 6;
+
+  /**
+   * The feature id for the '<em><b>Left Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE__LEFT_VALUE = LITERAL__LEFT_VALUE;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE__OPERATOR = LITERAL__OPERATOR;
+
+  /**
+   * The feature id for the '<em><b>Right Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE__RIGHT_VALUE = LITERAL__RIGHT_VALUE;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE__INTEGER = LITERAL_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE__DOUBLE = LITERAL_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VALUE_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.selfie.impl.VariableImpl <em>Variable</em>}' class.
@@ -259,7 +361,7 @@ public interface SelfiePackage extends EPackage
    * @see org.xtext.selfie.impl.SelfiePackageImpl#getVariable()
    * @generated
    */
-  int VARIABLE = 5;
+  int VARIABLE = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -287,34 +389,16 @@ public interface SelfiePackage extends EPackage
    * @see org.xtext.selfie.impl.SelfiePackageImpl#getVariableRef()
    * @generated
    */
-  int VARIABLE_REF = 6;
+  int VARIABLE_REF = 8;
 
   /**
-   * The feature id for the '<em><b>Variable</b></em>' containment reference.
+   * The feature id for the '<em><b>Left Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIABLE_REF__VARIABLE = VALUABLE__VARIABLE;
-
-  /**
-   * The feature id for the '<em><b>Valuable</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_REF__VALUABLE = VALUABLE__VALUABLE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_REF__LEFT = VALUABLE__LEFT;
+  int VARIABLE_REF__LEFT_VALUE = VALUABLE__LEFT_VALUE;
 
   /**
    * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -326,13 +410,22 @@ public interface SelfiePackage extends EPackage
   int VARIABLE_REF__OPERATOR = VALUABLE__OPERATOR;
 
   /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * The feature id for the '<em><b>Right Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VARIABLE_REF__RIGHT = VALUABLE__RIGHT;
+  int VARIABLE_REF__RIGHT_VALUE = VALUABLE__RIGHT_VALUE;
+
+  /**
+   * The feature id for the '<em><b>Variable</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_REF__VARIABLE = VALUABLE_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Variable Ref</em>' class.
@@ -341,7 +434,7 @@ public interface SelfiePackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE_REF_FEATURE_COUNT = VALUABLE_FEATURE_COUNT + 0;
+  int VARIABLE_REF_FEATURE_COUNT = VALUABLE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.xtext.selfie.impl.CalculationImpl <em>Calculation</em>}' class.
@@ -351,34 +444,16 @@ public interface SelfiePackage extends EPackage
    * @see org.xtext.selfie.impl.SelfiePackageImpl#getCalculation()
    * @generated
    */
-  int CALCULATION = 7;
+  int CALCULATION = 9;
 
   /**
-   * The feature id for the '<em><b>Variable</b></em>' containment reference.
+   * The feature id for the '<em><b>Left Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALCULATION__VARIABLE = VALUABLE__VARIABLE;
-
-  /**
-   * The feature id for the '<em><b>Valuable</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALCULATION__VALUABLE = VALUABLE__VALUABLE;
-
-  /**
-   * The feature id for the '<em><b>Left</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CALCULATION__LEFT = VALUABLE__LEFT;
+  int CALCULATION__LEFT_VALUE = VALUABLE__LEFT_VALUE;
 
   /**
    * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -390,13 +465,13 @@ public interface SelfiePackage extends EPackage
   int CALCULATION__OPERATOR = VALUABLE__OPERATOR;
 
   /**
-   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * The feature id for the '<em><b>Right Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CALCULATION__RIGHT = VALUABLE__RIGHT;
+  int CALCULATION__RIGHT_VALUE = VALUABLE__RIGHT_VALUE;
 
   /**
    * The number of structural features of the '<em>Calculation</em>' class.
@@ -406,6 +481,16 @@ public interface SelfiePackage extends EPackage
    * @ordered
    */
   int CALCULATION_FEATURE_COUNT = VALUABLE_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.selfie.Operator <em>Operator</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.selfie.Operator
+   * @see org.xtext.selfie.impl.SelfiePackageImpl#getOperator()
+   * @generated
+   */
+  int OPERATOR = 10;
 
 
   /**
@@ -451,6 +536,17 @@ public interface SelfiePackage extends EPackage
   EReference getExpression_Variable();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.selfie.Expression#getValuable <em>Valuable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Valuable</em>'.
+   * @see org.xtext.selfie.Expression#getValuable()
+   * @see #getExpression()
+   * @generated
+   */
+  EReference getExpression_Valuable();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.selfie.Declaration <em>Declaration</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -459,17 +555,6 @@ public interface SelfiePackage extends EPackage
    * @generated
    */
   EClass getDeclaration();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.selfie.Declaration#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Value</em>'.
-   * @see org.xtext.selfie.Declaration#getValue()
-   * @see #getDeclaration()
-   * @generated
-   */
-  EAttribute getDeclaration_Value();
 
   /**
    * Returns the meta object for class '{@link org.xtext.selfie.Assignment <em>Assignment</em>}'.
@@ -482,17 +567,6 @@ public interface SelfiePackage extends EPackage
   EClass getAssignment();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.selfie.Assignment#getValuable <em>Valuable</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Valuable</em>'.
-   * @see org.xtext.selfie.Assignment#getValuable()
-   * @see #getAssignment()
-   * @generated
-   */
-  EReference getAssignment_Valuable();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.selfie.Valuable <em>Valuable</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -503,15 +577,15 @@ public interface SelfiePackage extends EPackage
   EClass getValuable();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.selfie.Valuable#getLeft <em>Left</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.selfie.Valuable#getLeftValue <em>Left Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Left</em>'.
-   * @see org.xtext.selfie.Valuable#getLeft()
+   * @return the meta object for the containment reference '<em>Left Value</em>'.
+   * @see org.xtext.selfie.Valuable#getLeftValue()
    * @see #getValuable()
    * @generated
    */
-  EReference getValuable_Left();
+  EReference getValuable_LeftValue();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.selfie.Valuable#getOperator <em>Operator</em>}'.
@@ -525,15 +599,57 @@ public interface SelfiePackage extends EPackage
   EAttribute getValuable_Operator();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.selfie.Valuable#getRight <em>Right</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.selfie.Valuable#getRightValue <em>Right Value</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Right</em>'.
-   * @see org.xtext.selfie.Valuable#getRight()
+   * @return the meta object for the containment reference '<em>Right Value</em>'.
+   * @see org.xtext.selfie.Valuable#getRightValue()
    * @see #getValuable()
    * @generated
    */
-  EReference getValuable_Right();
+  EReference getValuable_RightValue();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.selfie.Literal <em>Literal</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Literal</em>'.
+   * @see org.xtext.selfie.Literal
+   * @generated
+   */
+  EClass getLiteral();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.selfie.Value <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Value</em>'.
+   * @see org.xtext.selfie.Value
+   * @generated
+   */
+  EClass getValue();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.selfie.Value#getInteger <em>Integer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Integer</em>'.
+   * @see org.xtext.selfie.Value#getInteger()
+   * @see #getValue()
+   * @generated
+   */
+  EAttribute getValue_Integer();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.selfie.Value#getDouble <em>Double</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Double</em>'.
+   * @see org.xtext.selfie.Value#getDouble()
+   * @see #getValue()
+   * @generated
+   */
+  EAttribute getValue_Double();
 
   /**
    * Returns the meta object for class '{@link org.xtext.selfie.Variable <em>Variable</em>}'.
@@ -567,6 +683,17 @@ public interface SelfiePackage extends EPackage
   EClass getVariableRef();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.selfie.VariableRef#getVariable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Variable</em>'.
+   * @see org.xtext.selfie.VariableRef#getVariable()
+   * @see #getVariableRef()
+   * @generated
+   */
+  EReference getVariableRef_Variable();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.selfie.Calculation <em>Calculation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -575,6 +702,16 @@ public interface SelfiePackage extends EPackage
    * @generated
    */
   EClass getCalculation();
+
+  /**
+   * Returns the meta object for enum '{@link org.xtext.selfie.Operator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Operator</em>'.
+   * @see org.xtext.selfie.Operator
+   * @generated
+   */
+  EEnum getOperator();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -636,6 +773,14 @@ public interface SelfiePackage extends EPackage
     EReference EXPRESSION__VARIABLE = eINSTANCE.getExpression_Variable();
 
     /**
+     * The meta object literal for the '<em><b>Valuable</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXPRESSION__VALUABLE = eINSTANCE.getExpression_Valuable();
+
+    /**
      * The meta object literal for the '{@link org.xtext.selfie.impl.DeclarationImpl <em>Declaration</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -644,14 +789,6 @@ public interface SelfiePackage extends EPackage
      * @generated
      */
     EClass DECLARATION = eINSTANCE.getDeclaration();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DECLARATION__VALUE = eINSTANCE.getDeclaration_Value();
 
     /**
      * The meta object literal for the '{@link org.xtext.selfie.impl.AssignmentImpl <em>Assignment</em>}' class.
@@ -664,14 +801,6 @@ public interface SelfiePackage extends EPackage
     EClass ASSIGNMENT = eINSTANCE.getAssignment();
 
     /**
-     * The meta object literal for the '<em><b>Valuable</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ASSIGNMENT__VALUABLE = eINSTANCE.getAssignment_Valuable();
-
-    /**
      * The meta object literal for the '{@link org.xtext.selfie.impl.ValuableImpl <em>Valuable</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -682,12 +811,12 @@ public interface SelfiePackage extends EPackage
     EClass VALUABLE = eINSTANCE.getValuable();
 
     /**
-     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Left Value</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference VALUABLE__LEFT = eINSTANCE.getValuable_Left();
+    EReference VALUABLE__LEFT_VALUE = eINSTANCE.getValuable_LeftValue();
 
     /**
      * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
@@ -698,12 +827,48 @@ public interface SelfiePackage extends EPackage
     EAttribute VALUABLE__OPERATOR = eINSTANCE.getValuable_Operator();
 
     /**
-     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Right Value</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference VALUABLE__RIGHT = eINSTANCE.getValuable_Right();
+    EReference VALUABLE__RIGHT_VALUE = eINSTANCE.getValuable_RightValue();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.selfie.impl.LiteralImpl <em>Literal</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.selfie.impl.LiteralImpl
+     * @see org.xtext.selfie.impl.SelfiePackageImpl#getLiteral()
+     * @generated
+     */
+    EClass LITERAL = eINSTANCE.getLiteral();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.selfie.impl.ValueImpl <em>Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.selfie.impl.ValueImpl
+     * @see org.xtext.selfie.impl.SelfiePackageImpl#getValue()
+     * @generated
+     */
+    EClass VALUE = eINSTANCE.getValue();
+
+    /**
+     * The meta object literal for the '<em><b>Integer</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VALUE__INTEGER = eINSTANCE.getValue_Integer();
+
+    /**
+     * The meta object literal for the '<em><b>Double</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VALUE__DOUBLE = eINSTANCE.getValue_Double();
 
     /**
      * The meta object literal for the '{@link org.xtext.selfie.impl.VariableImpl <em>Variable</em>}' class.
@@ -734,6 +899,14 @@ public interface SelfiePackage extends EPackage
     EClass VARIABLE_REF = eINSTANCE.getVariableRef();
 
     /**
+     * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIABLE_REF__VARIABLE = eINSTANCE.getVariableRef_Variable();
+
+    /**
      * The meta object literal for the '{@link org.xtext.selfie.impl.CalculationImpl <em>Calculation</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -742,6 +915,16 @@ public interface SelfiePackage extends EPackage
      * @generated
      */
     EClass CALCULATION = eINSTANCE.getCalculation();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.selfie.Operator <em>Operator</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.selfie.Operator
+     * @see org.xtext.selfie.impl.SelfiePackageImpl#getOperator()
+     * @generated
+     */
+    EEnum OPERATOR = eINSTANCE.getOperator();
 
   }
 

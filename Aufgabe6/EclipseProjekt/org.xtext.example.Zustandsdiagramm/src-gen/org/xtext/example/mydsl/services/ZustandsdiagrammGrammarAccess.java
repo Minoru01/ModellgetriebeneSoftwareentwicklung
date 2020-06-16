@@ -34,10 +34,10 @@ public class ZustandsdiagrammGrammarAccess extends AbstractGrammarElementFinder 
 		private final RuleCall cGenericStateGenericStateParserRuleCall_2_0 = (RuleCall)cGenericStateAssignment_2.eContents().get(0);
 		
 		//Model:
-		//	initialState+=InitialState & finalState+=FinalState & genericState+=GenericState*;
+		//	initialState+=InitialState & finalState+=FinalState* & genericState+=GenericState*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//initialState+=InitialState & finalState+=FinalState & genericState+=GenericState*
+		//initialState+=InitialState & finalState+=FinalState* & genericState+=GenericState*
 		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
 		
 		//initialState+=InitialState
@@ -46,7 +46,7 @@ public class ZustandsdiagrammGrammarAccess extends AbstractGrammarElementFinder 
 		//InitialState
 		public RuleCall getInitialStateInitialStateParserRuleCall_0_0() { return cInitialStateInitialStateParserRuleCall_0_0; }
 		
-		//finalState+=FinalState
+		//finalState+=FinalState*
 		public Assignment getFinalStateAssignment_1() { return cFinalStateAssignment_1; }
 		
 		//FinalState
@@ -353,7 +353,7 @@ public class ZustandsdiagrammGrammarAccess extends AbstractGrammarElementFinder 
 
 	
 	//Model:
-	//	initialState+=InitialState & finalState+=FinalState & genericState+=GenericState*;
+	//	initialState+=InitialState & finalState+=FinalState* & genericState+=GenericState*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}

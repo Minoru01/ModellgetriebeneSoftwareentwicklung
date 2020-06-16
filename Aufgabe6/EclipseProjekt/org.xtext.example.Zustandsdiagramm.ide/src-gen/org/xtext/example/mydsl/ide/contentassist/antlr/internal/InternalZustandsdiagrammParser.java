@@ -3144,37 +3144,37 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Model__UnorderedGroup__Impl"
-    // InternalZustandsdiagramm.g:1029:1: rule__Model__UnorderedGroup__Impl : ( ({...}? => ( ( ( rule__Model__InitialStateAssignment_0 ) ) ) ) | ({...}? => ( ( ( rule__Model__FinalStateAssignment_1 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) ) ) ;
+    // InternalZustandsdiagramm.g:1029:1: rule__Model__UnorderedGroup__Impl : ( ({...}? => ( ( ( rule__Model__InitialStateAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) ) ) ) | ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) ) ) ;
     public final void rule__Model__UnorderedGroup__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalZustandsdiagramm.g:1034:1: ( ( ({...}? => ( ( ( rule__Model__InitialStateAssignment_0 ) ) ) ) | ({...}? => ( ( ( rule__Model__FinalStateAssignment_1 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) ) ) )
-            // InternalZustandsdiagramm.g:1035:3: ( ({...}? => ( ( ( rule__Model__InitialStateAssignment_0 ) ) ) ) | ({...}? => ( ( ( rule__Model__FinalStateAssignment_1 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) ) )
+            // InternalZustandsdiagramm.g:1034:1: ( ( ({...}? => ( ( ( rule__Model__InitialStateAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) ) ) ) | ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) ) ) )
+            // InternalZustandsdiagramm.g:1035:3: ( ({...}? => ( ( ( rule__Model__InitialStateAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) ) ) ) | ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) ) )
             {
-            // InternalZustandsdiagramm.g:1035:3: ( ({...}? => ( ( ( rule__Model__InitialStateAssignment_0 ) ) ) ) | ({...}? => ( ( ( rule__Model__FinalStateAssignment_1 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) ) )
-            int alt4=3;
-            int LA4_0 = input.LA(1);
+            // InternalZustandsdiagramm.g:1035:3: ( ({...}? => ( ( ( rule__Model__InitialStateAssignment_0 ) ) ) ) | ({...}? => ( ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) ) ) ) | ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) ) )
+            int alt5=3;
+            int LA5_0 = input.LA(1);
 
-            if ( LA4_0 == 11 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0) ) {
-                alt4=1;
+            if ( LA5_0 == 11 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0) ) {
+                alt5=1;
             }
-            else if ( LA4_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
-                alt4=2;
+            else if ( LA5_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
+                alt5=2;
             }
-            else if ( LA4_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2) ) {
-                alt4=3;
+            else if ( LA5_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2) ) {
+                alt5=3;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
                     // InternalZustandsdiagramm.g:1036:3: ({...}? => ( ( ( rule__Model__InitialStateAssignment_0 ) ) ) )
                     {
@@ -3223,36 +3223,104 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
                     }
                     break;
                 case 2 :
-                    // InternalZustandsdiagramm.g:1051:3: ({...}? => ( ( ( rule__Model__FinalStateAssignment_1 ) ) ) )
+                    // InternalZustandsdiagramm.g:1051:3: ({...}? => ( ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) ) ) )
                     {
-                    // InternalZustandsdiagramm.g:1051:3: ({...}? => ( ( ( rule__Model__FinalStateAssignment_1 ) ) ) )
-                    // InternalZustandsdiagramm.g:1052:4: {...}? => ( ( ( rule__Model__FinalStateAssignment_1 ) ) )
+                    // InternalZustandsdiagramm.g:1051:3: ({...}? => ( ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) ) ) )
+                    // InternalZustandsdiagramm.g:1052:4: {...}? => ( ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__Model__UnorderedGroup__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1)");
                     }
-                    // InternalZustandsdiagramm.g:1052:99: ( ( ( rule__Model__FinalStateAssignment_1 ) ) )
-                    // InternalZustandsdiagramm.g:1053:5: ( ( rule__Model__FinalStateAssignment_1 ) )
+                    // InternalZustandsdiagramm.g:1052:99: ( ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) ) )
+                    // InternalZustandsdiagramm.g:1053:5: ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getModelAccess().getUnorderedGroup(), 1);
                     selected = true;
-                    // InternalZustandsdiagramm.g:1059:5: ( ( rule__Model__FinalStateAssignment_1 ) )
-                    // InternalZustandsdiagramm.g:1060:6: ( rule__Model__FinalStateAssignment_1 )
+                    // InternalZustandsdiagramm.g:1059:5: ( ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* ) )
+                    // InternalZustandsdiagramm.g:1060:6: ( ( rule__Model__FinalStateAssignment_1 ) ) ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* )
+                    {
+                    // InternalZustandsdiagramm.g:1060:6: ( ( rule__Model__FinalStateAssignment_1 ) )
+                    // InternalZustandsdiagramm.g:1061:7: ( rule__Model__FinalStateAssignment_1 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getModelAccess().getFinalStateAssignment_1()); 
                     }
-                    // InternalZustandsdiagramm.g:1061:6: ( rule__Model__FinalStateAssignment_1 )
-                    // InternalZustandsdiagramm.g:1061:7: rule__Model__FinalStateAssignment_1
+                    // InternalZustandsdiagramm.g:1062:7: ( rule__Model__FinalStateAssignment_1 )
+                    // InternalZustandsdiagramm.g:1062:8: rule__Model__FinalStateAssignment_1
                     {
-                    pushFollow(FOLLOW_2);
+                    pushFollow(FOLLOW_12);
                     rule__Model__FinalStateAssignment_1();
 
                     state._fsp--;
                     if (state.failed) return ;
 
                     }
+
+                    if ( state.backtracking==0 ) {
+                       after(grammarAccess.getModelAccess().getFinalStateAssignment_1()); 
+                    }
+
+                    }
+
+                    // InternalZustandsdiagramm.g:1065:6: ( ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )* )
+                    // InternalZustandsdiagramm.g:1066:7: ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )*
+                    {
+                    if ( state.backtracking==0 ) {
+                       before(grammarAccess.getModelAccess().getFinalStateAssignment_1()); 
+                    }
+                    // InternalZustandsdiagramm.g:1067:7: ( ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1 )*
+                    loop3:
+                    do {
+                        int alt3=2;
+                        int LA3_0 = input.LA(1);
+
+                        if ( (LA3_0==15) ) {
+                            int LA3_2 = input.LA(2);
+
+                            if ( (LA3_2==12) ) {
+                                int LA3_3 = input.LA(3);
+
+                                if ( (LA3_3==RULE_ID) ) {
+                                    int LA3_4 = input.LA(4);
+
+                                    if ( (LA3_4==14) ) {
+                                        int LA3_5 = input.LA(5);
+
+                                        if ( (synpred1_InternalZustandsdiagramm()) ) {
+                                            alt3=1;
+                                        }
+
+
+                                    }
+
+
+                                }
+
+
+                            }
+
+
+                        }
+
+
+                        switch (alt3) {
+                    	case 1 :
+                    	    // InternalZustandsdiagramm.g:1067:8: ( rule__Model__FinalStateAssignment_1 )=> rule__Model__FinalStateAssignment_1
+                    	    {
+                    	    pushFollow(FOLLOW_12);
+                    	    rule__Model__FinalStateAssignment_1();
+
+                    	    state._fsp--;
+                    	    if (state.failed) return ;
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop3;
+                        }
+                    } while (true);
 
                     if ( state.backtracking==0 ) {
                        after(grammarAccess.getModelAccess().getFinalStateAssignment_1()); 
@@ -3268,35 +3336,38 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
                     }
+
+
+                    }
                     break;
                 case 3 :
-                    // InternalZustandsdiagramm.g:1066:3: ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) )
+                    // InternalZustandsdiagramm.g:1073:3: ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) )
                     {
-                    // InternalZustandsdiagramm.g:1066:3: ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) )
-                    // InternalZustandsdiagramm.g:1067:4: {...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) )
+                    // InternalZustandsdiagramm.g:1073:3: ({...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) ) )
+                    // InternalZustandsdiagramm.g:1074:4: {...}? => ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2) ) {
                         if (state.backtracking>0) {state.failed=true; return ;}
                         throw new FailedPredicateException(input, "rule__Model__UnorderedGroup__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2)");
                     }
-                    // InternalZustandsdiagramm.g:1067:99: ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) )
-                    // InternalZustandsdiagramm.g:1068:5: ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) )
+                    // InternalZustandsdiagramm.g:1074:99: ( ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) ) )
+                    // InternalZustandsdiagramm.g:1075:5: ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) )
                     {
                     getUnorderedGroupHelper().select(grammarAccess.getModelAccess().getUnorderedGroup(), 2);
                     selected = true;
-                    // InternalZustandsdiagramm.g:1074:5: ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) )
-                    // InternalZustandsdiagramm.g:1075:6: ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* )
+                    // InternalZustandsdiagramm.g:1081:5: ( ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* ) )
+                    // InternalZustandsdiagramm.g:1082:6: ( ( rule__Model__GenericStateAssignment_2 ) ) ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* )
                     {
-                    // InternalZustandsdiagramm.g:1075:6: ( ( rule__Model__GenericStateAssignment_2 ) )
-                    // InternalZustandsdiagramm.g:1076:7: ( rule__Model__GenericStateAssignment_2 )
+                    // InternalZustandsdiagramm.g:1082:6: ( ( rule__Model__GenericStateAssignment_2 ) )
+                    // InternalZustandsdiagramm.g:1083:7: ( rule__Model__GenericStateAssignment_2 )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getModelAccess().getGenericStateAssignment_2()); 
                     }
-                    // InternalZustandsdiagramm.g:1077:7: ( rule__Model__GenericStateAssignment_2 )
-                    // InternalZustandsdiagramm.g:1077:8: rule__Model__GenericStateAssignment_2
+                    // InternalZustandsdiagramm.g:1084:7: ( rule__Model__GenericStateAssignment_2 )
+                    // InternalZustandsdiagramm.g:1084:8: rule__Model__GenericStateAssignment_2
                     {
-                    pushFollow(FOLLOW_12);
+                    pushFollow(FOLLOW_13);
                     rule__Model__GenericStateAssignment_2();
 
                     state._fsp--;
@@ -3310,22 +3381,22 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
                     }
 
-                    // InternalZustandsdiagramm.g:1080:6: ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* )
-                    // InternalZustandsdiagramm.g:1081:7: ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )*
+                    // InternalZustandsdiagramm.g:1087:6: ( ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )* )
+                    // InternalZustandsdiagramm.g:1088:7: ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )*
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getModelAccess().getGenericStateAssignment_2()); 
                     }
-                    // InternalZustandsdiagramm.g:1082:7: ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )*
-                    loop3:
+                    // InternalZustandsdiagramm.g:1089:7: ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )*
+                    loop4:
                     do {
-                        int alt3=2;
-                        alt3 = dfa3.predict(input);
-                        switch (alt3) {
+                        int alt4=2;
+                        alt4 = dfa4.predict(input);
+                        switch (alt4) {
                     	case 1 :
-                    	    // InternalZustandsdiagramm.g:1082:8: ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2
+                    	    // InternalZustandsdiagramm.g:1089:8: ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2
                     	    {
-                    	    pushFollow(FOLLOW_12);
+                    	    pushFollow(FOLLOW_13);
                     	    rule__Model__GenericStateAssignment_2();
 
                     	    state._fsp--;
@@ -3335,7 +3406,7 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
                     	    break;
 
                     	default :
-                    	    break loop3;
+                    	    break loop4;
                         }
                     } while (true);
 
@@ -3381,36 +3452,36 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Model__UnorderedGroup__0"
-    // InternalZustandsdiagramm.g:1096:1: rule__Model__UnorderedGroup__0 : rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )? ;
+    // InternalZustandsdiagramm.g:1103:1: rule__Model__UnorderedGroup__0 : rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )? ;
     public final void rule__Model__UnorderedGroup__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1100:1: ( rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )? )
-            // InternalZustandsdiagramm.g:1101:2: rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )?
+            // InternalZustandsdiagramm.g:1107:1: ( rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )? )
+            // InternalZustandsdiagramm.g:1108:2: rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__1 )?
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_14);
             rule__Model__UnorderedGroup__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            // InternalZustandsdiagramm.g:1102:2: ( rule__Model__UnorderedGroup__1 )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            // InternalZustandsdiagramm.g:1109:2: ( rule__Model__UnorderedGroup__1 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( LA5_0 == 11 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0) ) {
-                alt5=1;
+            if ( LA6_0 == 11 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0) ) {
+                alt6=1;
             }
-            else if ( LA5_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
-                alt5=1;
+            else if ( LA6_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
+                alt6=1;
             }
-            else if ( LA5_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2) ) {
-                alt5=1;
+            else if ( LA6_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2) ) {
+                alt6=1;
             }
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // InternalZustandsdiagramm.g:1102:2: rule__Model__UnorderedGroup__1
+                    // InternalZustandsdiagramm.g:1109:2: rule__Model__UnorderedGroup__1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Model__UnorderedGroup__1();
@@ -3442,36 +3513,36 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Model__UnorderedGroup__1"
-    // InternalZustandsdiagramm.g:1108:1: rule__Model__UnorderedGroup__1 : rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__2 )? ;
+    // InternalZustandsdiagramm.g:1115:1: rule__Model__UnorderedGroup__1 : rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__2 )? ;
     public final void rule__Model__UnorderedGroup__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1112:1: ( rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__2 )? )
-            // InternalZustandsdiagramm.g:1113:2: rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__2 )?
+            // InternalZustandsdiagramm.g:1119:1: ( rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__2 )? )
+            // InternalZustandsdiagramm.g:1120:2: rule__Model__UnorderedGroup__Impl ( rule__Model__UnorderedGroup__2 )?
             {
-            pushFollow(FOLLOW_13);
+            pushFollow(FOLLOW_14);
             rule__Model__UnorderedGroup__Impl();
 
             state._fsp--;
             if (state.failed) return ;
-            // InternalZustandsdiagramm.g:1114:2: ( rule__Model__UnorderedGroup__2 )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // InternalZustandsdiagramm.g:1121:2: ( rule__Model__UnorderedGroup__2 )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( LA6_0 == 11 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0) ) {
-                alt6=1;
+            if ( LA7_0 == 11 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0) ) {
+                alt7=1;
             }
-            else if ( LA6_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
-                alt6=1;
+            else if ( LA7_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
+                alt7=1;
             }
-            else if ( LA6_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2) ) {
-                alt6=1;
+            else if ( LA7_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2) ) {
+                alt7=1;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // InternalZustandsdiagramm.g:1114:2: rule__Model__UnorderedGroup__2
+                    // InternalZustandsdiagramm.g:1121:2: rule__Model__UnorderedGroup__2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Model__UnorderedGroup__2();
@@ -3503,14 +3574,14 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Model__UnorderedGroup__2"
-    // InternalZustandsdiagramm.g:1120:1: rule__Model__UnorderedGroup__2 : rule__Model__UnorderedGroup__Impl ;
+    // InternalZustandsdiagramm.g:1127:1: rule__Model__UnorderedGroup__2 : rule__Model__UnorderedGroup__Impl ;
     public final void rule__Model__UnorderedGroup__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1124:1: ( rule__Model__UnorderedGroup__Impl )
-            // InternalZustandsdiagramm.g:1125:2: rule__Model__UnorderedGroup__Impl
+            // InternalZustandsdiagramm.g:1131:1: ( rule__Model__UnorderedGroup__Impl )
+            // InternalZustandsdiagramm.g:1132:2: rule__Model__UnorderedGroup__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Model__UnorderedGroup__Impl();
@@ -3536,17 +3607,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Model__InitialStateAssignment_0"
-    // InternalZustandsdiagramm.g:1132:1: rule__Model__InitialStateAssignment_0 : ( ruleInitialState ) ;
+    // InternalZustandsdiagramm.g:1139:1: rule__Model__InitialStateAssignment_0 : ( ruleInitialState ) ;
     public final void rule__Model__InitialStateAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1136:1: ( ( ruleInitialState ) )
-            // InternalZustandsdiagramm.g:1137:2: ( ruleInitialState )
+            // InternalZustandsdiagramm.g:1143:1: ( ( ruleInitialState ) )
+            // InternalZustandsdiagramm.g:1144:2: ( ruleInitialState )
             {
-            // InternalZustandsdiagramm.g:1137:2: ( ruleInitialState )
-            // InternalZustandsdiagramm.g:1138:3: ruleInitialState
+            // InternalZustandsdiagramm.g:1144:2: ( ruleInitialState )
+            // InternalZustandsdiagramm.g:1145:3: ruleInitialState
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getInitialStateInitialStateParserRuleCall_0_0()); 
@@ -3581,17 +3652,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Model__FinalStateAssignment_1"
-    // InternalZustandsdiagramm.g:1147:1: rule__Model__FinalStateAssignment_1 : ( ruleFinalState ) ;
+    // InternalZustandsdiagramm.g:1154:1: rule__Model__FinalStateAssignment_1 : ( ruleFinalState ) ;
     public final void rule__Model__FinalStateAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1151:1: ( ( ruleFinalState ) )
-            // InternalZustandsdiagramm.g:1152:2: ( ruleFinalState )
+            // InternalZustandsdiagramm.g:1158:1: ( ( ruleFinalState ) )
+            // InternalZustandsdiagramm.g:1159:2: ( ruleFinalState )
             {
-            // InternalZustandsdiagramm.g:1152:2: ( ruleFinalState )
-            // InternalZustandsdiagramm.g:1153:3: ruleFinalState
+            // InternalZustandsdiagramm.g:1159:2: ( ruleFinalState )
+            // InternalZustandsdiagramm.g:1160:3: ruleFinalState
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getFinalStateFinalStateParserRuleCall_1_0()); 
@@ -3626,17 +3697,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Model__GenericStateAssignment_2"
-    // InternalZustandsdiagramm.g:1162:1: rule__Model__GenericStateAssignment_2 : ( ruleGenericState ) ;
+    // InternalZustandsdiagramm.g:1169:1: rule__Model__GenericStateAssignment_2 : ( ruleGenericState ) ;
     public final void rule__Model__GenericStateAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1166:1: ( ( ruleGenericState ) )
-            // InternalZustandsdiagramm.g:1167:2: ( ruleGenericState )
+            // InternalZustandsdiagramm.g:1173:1: ( ( ruleGenericState ) )
+            // InternalZustandsdiagramm.g:1174:2: ( ruleGenericState )
             {
-            // InternalZustandsdiagramm.g:1167:2: ( ruleGenericState )
-            // InternalZustandsdiagramm.g:1168:3: ruleGenericState
+            // InternalZustandsdiagramm.g:1174:2: ( ruleGenericState )
+            // InternalZustandsdiagramm.g:1175:3: ruleGenericState
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getModelAccess().getGenericStateGenericStateParserRuleCall_2_0()); 
@@ -3671,17 +3742,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__TargetableState__NameAssignment"
-    // InternalZustandsdiagramm.g:1177:1: rule__TargetableState__NameAssignment : ( RULE_ID ) ;
+    // InternalZustandsdiagramm.g:1184:1: rule__TargetableState__NameAssignment : ( RULE_ID ) ;
     public final void rule__TargetableState__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1181:1: ( ( RULE_ID ) )
-            // InternalZustandsdiagramm.g:1182:2: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1188:1: ( ( RULE_ID ) )
+            // InternalZustandsdiagramm.g:1189:2: ( RULE_ID )
             {
-            // InternalZustandsdiagramm.g:1182:2: ( RULE_ID )
-            // InternalZustandsdiagramm.g:1183:3: RULE_ID
+            // InternalZustandsdiagramm.g:1189:2: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1190:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTargetableStateAccess().getNameIDTerminalRuleCall_0()); 
@@ -3712,17 +3783,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__InitialState__NameAssignment_2"
-    // InternalZustandsdiagramm.g:1192:1: rule__InitialState__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalZustandsdiagramm.g:1199:1: rule__InitialState__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__InitialState__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1196:1: ( ( RULE_ID ) )
-            // InternalZustandsdiagramm.g:1197:2: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1203:1: ( ( RULE_ID ) )
+            // InternalZustandsdiagramm.g:1204:2: ( RULE_ID )
             {
-            // InternalZustandsdiagramm.g:1197:2: ( RULE_ID )
-            // InternalZustandsdiagramm.g:1198:3: RULE_ID
+            // InternalZustandsdiagramm.g:1204:2: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1205:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInitialStateAccess().getNameIDTerminalRuleCall_2_0()); 
@@ -3753,17 +3824,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__InitialState__TransitionAssignment_4"
-    // InternalZustandsdiagramm.g:1207:1: rule__InitialState__TransitionAssignment_4 : ( ruleTransition ) ;
+    // InternalZustandsdiagramm.g:1214:1: rule__InitialState__TransitionAssignment_4 : ( ruleTransition ) ;
     public final void rule__InitialState__TransitionAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1211:1: ( ( ruleTransition ) )
-            // InternalZustandsdiagramm.g:1212:2: ( ruleTransition )
+            // InternalZustandsdiagramm.g:1218:1: ( ( ruleTransition ) )
+            // InternalZustandsdiagramm.g:1219:2: ( ruleTransition )
             {
-            // InternalZustandsdiagramm.g:1212:2: ( ruleTransition )
-            // InternalZustandsdiagramm.g:1213:3: ruleTransition
+            // InternalZustandsdiagramm.g:1219:2: ( ruleTransition )
+            // InternalZustandsdiagramm.g:1220:3: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getInitialStateAccess().getTransitionTransitionParserRuleCall_4_0()); 
@@ -3798,17 +3869,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__FinalState__NameAssignment_2"
-    // InternalZustandsdiagramm.g:1222:1: rule__FinalState__NameAssignment_2 : ( ruleTargetableState ) ;
+    // InternalZustandsdiagramm.g:1229:1: rule__FinalState__NameAssignment_2 : ( ruleTargetableState ) ;
     public final void rule__FinalState__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1226:1: ( ( ruleTargetableState ) )
-            // InternalZustandsdiagramm.g:1227:2: ( ruleTargetableState )
+            // InternalZustandsdiagramm.g:1233:1: ( ( ruleTargetableState ) )
+            // InternalZustandsdiagramm.g:1234:2: ( ruleTargetableState )
             {
-            // InternalZustandsdiagramm.g:1227:2: ( ruleTargetableState )
-            // InternalZustandsdiagramm.g:1228:3: ruleTargetableState
+            // InternalZustandsdiagramm.g:1234:2: ( ruleTargetableState )
+            // InternalZustandsdiagramm.g:1235:3: ruleTargetableState
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getFinalStateAccess().getNameTargetableStateParserRuleCall_2_0()); 
@@ -3843,17 +3914,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GenericState__NameAssignment_2"
-    // InternalZustandsdiagramm.g:1237:1: rule__GenericState__NameAssignment_2 : ( ruleTargetableState ) ;
+    // InternalZustandsdiagramm.g:1244:1: rule__GenericState__NameAssignment_2 : ( ruleTargetableState ) ;
     public final void rule__GenericState__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1241:1: ( ( ruleTargetableState ) )
-            // InternalZustandsdiagramm.g:1242:2: ( ruleTargetableState )
+            // InternalZustandsdiagramm.g:1248:1: ( ( ruleTargetableState ) )
+            // InternalZustandsdiagramm.g:1249:2: ( ruleTargetableState )
             {
-            // InternalZustandsdiagramm.g:1242:2: ( ruleTargetableState )
-            // InternalZustandsdiagramm.g:1243:3: ruleTargetableState
+            // InternalZustandsdiagramm.g:1249:2: ( ruleTargetableState )
+            // InternalZustandsdiagramm.g:1250:3: ruleTargetableState
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGenericStateAccess().getNameTargetableStateParserRuleCall_2_0()); 
@@ -3888,17 +3959,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__GenericState__TransitionsAssignment_4"
-    // InternalZustandsdiagramm.g:1252:1: rule__GenericState__TransitionsAssignment_4 : ( ruleTransition ) ;
+    // InternalZustandsdiagramm.g:1259:1: rule__GenericState__TransitionsAssignment_4 : ( ruleTransition ) ;
     public final void rule__GenericState__TransitionsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1256:1: ( ( ruleTransition ) )
-            // InternalZustandsdiagramm.g:1257:2: ( ruleTransition )
+            // InternalZustandsdiagramm.g:1263:1: ( ( ruleTransition ) )
+            // InternalZustandsdiagramm.g:1264:2: ( ruleTransition )
             {
-            // InternalZustandsdiagramm.g:1257:2: ( ruleTransition )
-            // InternalZustandsdiagramm.g:1258:3: ruleTransition
+            // InternalZustandsdiagramm.g:1264:2: ( ruleTransition )
+            // InternalZustandsdiagramm.g:1265:3: ruleTransition
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGenericStateAccess().getTransitionsTransitionParserRuleCall_4_0()); 
@@ -3933,17 +4004,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Transition__EventAssignment_2"
-    // InternalZustandsdiagramm.g:1267:1: rule__Transition__EventAssignment_2 : ( ruleEvent ) ;
+    // InternalZustandsdiagramm.g:1274:1: rule__Transition__EventAssignment_2 : ( ruleEvent ) ;
     public final void rule__Transition__EventAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1271:1: ( ( ruleEvent ) )
-            // InternalZustandsdiagramm.g:1272:2: ( ruleEvent )
+            // InternalZustandsdiagramm.g:1278:1: ( ( ruleEvent ) )
+            // InternalZustandsdiagramm.g:1279:2: ( ruleEvent )
             {
-            // InternalZustandsdiagramm.g:1272:2: ( ruleEvent )
-            // InternalZustandsdiagramm.g:1273:3: ruleEvent
+            // InternalZustandsdiagramm.g:1279:2: ( ruleEvent )
+            // InternalZustandsdiagramm.g:1280:3: ruleEvent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTransitionAccess().getEventEventParserRuleCall_2_0()); 
@@ -3978,23 +4049,23 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Transition__ToAssignment_4"
-    // InternalZustandsdiagramm.g:1282:1: rule__Transition__ToAssignment_4 : ( ( RULE_ID ) ) ;
+    // InternalZustandsdiagramm.g:1289:1: rule__Transition__ToAssignment_4 : ( ( RULE_ID ) ) ;
     public final void rule__Transition__ToAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1286:1: ( ( ( RULE_ID ) ) )
-            // InternalZustandsdiagramm.g:1287:2: ( ( RULE_ID ) )
+            // InternalZustandsdiagramm.g:1293:1: ( ( ( RULE_ID ) ) )
+            // InternalZustandsdiagramm.g:1294:2: ( ( RULE_ID ) )
             {
-            // InternalZustandsdiagramm.g:1287:2: ( ( RULE_ID ) )
-            // InternalZustandsdiagramm.g:1288:3: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1294:2: ( ( RULE_ID ) )
+            // InternalZustandsdiagramm.g:1295:3: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTransitionAccess().getToTargetableStateCrossReference_4_0()); 
             }
-            // InternalZustandsdiagramm.g:1289:3: ( RULE_ID )
-            // InternalZustandsdiagramm.g:1290:4: RULE_ID
+            // InternalZustandsdiagramm.g:1296:3: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1297:4: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTransitionAccess().getToTargetableStateIDTerminalRuleCall_4_0_1()); 
@@ -4031,17 +4102,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Event__NameAssignment_0"
-    // InternalZustandsdiagramm.g:1301:1: rule__Event__NameAssignment_0 : ( RULE_ID ) ;
+    // InternalZustandsdiagramm.g:1308:1: rule__Event__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Event__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1305:1: ( ( RULE_ID ) )
-            // InternalZustandsdiagramm.g:1306:2: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1312:1: ( ( RULE_ID ) )
+            // InternalZustandsdiagramm.g:1313:2: ( RULE_ID )
             {
-            // InternalZustandsdiagramm.g:1306:2: ( RULE_ID )
-            // InternalZustandsdiagramm.g:1307:3: RULE_ID
+            // InternalZustandsdiagramm.g:1313:2: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1314:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEventAccess().getNameIDTerminalRuleCall_0_0()); 
@@ -4072,17 +4143,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Event__GuardAssignment_1_1"
-    // InternalZustandsdiagramm.g:1316:1: rule__Event__GuardAssignment_1_1 : ( ruleGuard ) ;
+    // InternalZustandsdiagramm.g:1323:1: rule__Event__GuardAssignment_1_1 : ( ruleGuard ) ;
     public final void rule__Event__GuardAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1320:1: ( ( ruleGuard ) )
-            // InternalZustandsdiagramm.g:1321:2: ( ruleGuard )
+            // InternalZustandsdiagramm.g:1327:1: ( ( ruleGuard ) )
+            // InternalZustandsdiagramm.g:1328:2: ( ruleGuard )
             {
-            // InternalZustandsdiagramm.g:1321:2: ( ruleGuard )
-            // InternalZustandsdiagramm.g:1322:3: ruleGuard
+            // InternalZustandsdiagramm.g:1328:2: ( ruleGuard )
+            // InternalZustandsdiagramm.g:1329:3: ruleGuard
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getEventAccess().getGuardGuardParserRuleCall_1_1_0()); 
@@ -4117,17 +4188,17 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
 
     // $ANTLR start "rule__Guard__NameAssignment_2"
-    // InternalZustandsdiagramm.g:1331:1: rule__Guard__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalZustandsdiagramm.g:1338:1: rule__Guard__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Guard__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalZustandsdiagramm.g:1335:1: ( ( RULE_ID ) )
-            // InternalZustandsdiagramm.g:1336:2: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1342:1: ( ( RULE_ID ) )
+            // InternalZustandsdiagramm.g:1343:2: ( RULE_ID )
             {
-            // InternalZustandsdiagramm.g:1336:2: ( RULE_ID )
-            // InternalZustandsdiagramm.g:1337:3: RULE_ID
+            // InternalZustandsdiagramm.g:1343:2: ( RULE_ID )
+            // InternalZustandsdiagramm.g:1344:3: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getGuardAccess().getNameIDTerminalRuleCall_2_0()); 
@@ -4158,8 +4229,23 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
     // $ANTLR start synpred1_InternalZustandsdiagramm
     public final void synpred1_InternalZustandsdiagramm_fragment() throws RecognitionException {   
-        // InternalZustandsdiagramm.g:1082:8: ( rule__Model__GenericStateAssignment_2 )
-        // InternalZustandsdiagramm.g:1082:9: rule__Model__GenericStateAssignment_2
+        // InternalZustandsdiagramm.g:1067:8: ( rule__Model__FinalStateAssignment_1 )
+        // InternalZustandsdiagramm.g:1067:9: rule__Model__FinalStateAssignment_1
+        {
+        pushFollow(FOLLOW_2);
+        rule__Model__FinalStateAssignment_1();
+
+        state._fsp--;
+        if (state.failed) return ;
+
+        }
+    }
+    // $ANTLR end synpred1_InternalZustandsdiagramm
+
+    // $ANTLR start synpred2_InternalZustandsdiagramm
+    public final void synpred2_InternalZustandsdiagramm_fragment() throws RecognitionException {   
+        // InternalZustandsdiagramm.g:1089:8: ( rule__Model__GenericStateAssignment_2 )
+        // InternalZustandsdiagramm.g:1089:9: rule__Model__GenericStateAssignment_2
         {
         pushFollow(FOLLOW_2);
         rule__Model__GenericStateAssignment_2();
@@ -4169,10 +4255,24 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
 
         }
     }
-    // $ANTLR end synpred1_InternalZustandsdiagramm
+    // $ANTLR end synpred2_InternalZustandsdiagramm
 
     // Delegated rules
 
+    public final boolean synpred2_InternalZustandsdiagramm() {
+        state.backtracking++;
+        int start = input.mark();
+        try {
+            synpred2_InternalZustandsdiagramm_fragment(); // can never throw exception
+        } catch (RecognitionException re) {
+            System.err.println("impossible: "+re);
+        }
+        boolean success = !state.failed;
+        input.rewind(start);
+        state.backtracking--;
+        state.failed=false;
+        return success;
+    }
     public final boolean synpred1_InternalZustandsdiagramm() {
         state.backtracking++;
         int start = input.mark();
@@ -4189,7 +4289,7 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
     }
 
 
-    protected DFA3 dfa3 = new DFA3(this);
+    protected DFA4 dfa4 = new DFA4(this);
     static final String dfa_1s = "\32\uffff";
     static final String dfa_2s = "\1\1\31\uffff";
     static final String dfa_3s = "\1\13\1\uffff\1\14\1\4\1\15\1\21\1\14\1\4\1\22\1\24\1\4\1\14\1\16\1\4\1\14\1\0\1\22\1\4\1\uffff\1\22\1\24\1\4\1\14\1\16\1\4\1\22";
@@ -4233,11 +4333,11 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
     static final short[] dfa_6 = DFA.unpackEncodedString(dfa_6s);
     static final short[][] dfa_7 = unpackEncodedStringArray(dfa_7s);
 
-    class DFA3 extends DFA {
+    class DFA4 extends DFA {
 
-        public DFA3(BaseRecognizer recognizer) {
+        public DFA4(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 3;
+            this.decisionNumber = 4;
             this.eot = dfa_1;
             this.eof = dfa_2;
             this.min = dfa_3;
@@ -4247,31 +4347,31 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
             this.transition = dfa_7;
         }
         public String getDescription() {
-            return "()* loopback of 1082:7: ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )*";
+            return "()* loopback of 1089:7: ( ( rule__Model__GenericStateAssignment_2 )=> rule__Model__GenericStateAssignment_2 )*";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA3_15 = input.LA(1);
+                        int LA4_15 = input.LA(1);
 
                          
-                        int index3_15 = input.index();
+                        int index4_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred1_InternalZustandsdiagramm()) ) {s = 18;}
+                        if ( (synpred2_InternalZustandsdiagramm()) ) {s = 18;}
 
                         else if ( (true) ) {s = 1;}
 
                          
-                        input.seek(index3_15);
+                        input.seek(index4_15);
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 3, _s, input);
+                new NoViableAltException(getDescription(), 4, _s, input);
             error(nvae);
             throw nvae;
         }
@@ -4289,7 +4389,8 @@ public class InternalZustandsdiagrammParser extends AbstractInternalContentAssis
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000018802L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000018802L});
 
 }

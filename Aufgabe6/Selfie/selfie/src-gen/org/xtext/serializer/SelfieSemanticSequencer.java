@@ -20,6 +20,7 @@ import org.xtext.selfie.Declaration;
 import org.xtext.selfie.Model;
 import org.xtext.selfie.SelfiePackage;
 import org.xtext.selfie.Valuable;
+import org.xtext.selfie.Value;
 import org.xtext.selfie.Variable;
 import org.xtext.selfie.VariableRef;
 import org.xtext.services.SelfieGrammarAccess;
@@ -53,6 +54,9 @@ public class SelfieSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case SelfiePackage.VALUABLE:
 				sequence_Calculation(context, (Valuable) semanticObject); 
 				return; 
+			case SelfiePackage.VALUE:
+				sequence_Value(context, (Value) semanticObject); 
+				return; 
 			case SelfiePackage.VARIABLE:
 				sequence_Variable(context, (Variable) semanticObject); 
 				return; 
@@ -76,26 +80,25 @@ public class SelfieSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.EXPRESSION__VARIABLE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.EXPRESSION__VARIABLE));
-			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.ASSIGNMENT__VALUABLE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.ASSIGNMENT__VALUABLE));
+			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.EXPRESSION__VALUABLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.EXPRESSION__VALUABLE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getAssignmentAccess().getVariableVariableParserRuleCall_0_0_0(), semanticObject.getVariable());
-		feeder.accept(grammarAccess.getAssignmentAccess().getValuableValuableParserRuleCall_0_2_0(), semanticObject.getValuable());
+		feeder.accept(grammarAccess.getAssignmentAccess().getVariableVariableParserRuleCall_0_0(), semanticObject.getVariable());
+		feeder.accept(grammarAccess.getAssignmentAccess().getValuableValuableParserRuleCall_2_0(), semanticObject.getValuable());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Expression returns Calculation
-	 *     Assignment returns Calculation
+	 *     Valuable returns Calculation
 	 *     Calculation returns Calculation
 	 *     Calculation.Calculation_1_1 returns Calculation
 	 *     ParenthesizedExpression returns Calculation
 	 *
 	 * Constraint:
-	 *     (left=Calculation_Calculation_1_1 (operator=Operator right=Valuable)?)
+	 *     (leftValue=Calculation_Calculation_1_1 (operator=Operator rightValue=Valuable)?)
 	 */
 	protected void sequence_Calculation(ISerializationContext context, Calculation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -104,29 +107,16 @@ public class SelfieSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     Expression returns Valuable
-	 *     Assignment returns Valuable
+	 *     Valuable returns Valuable
 	 *     Calculation returns Valuable
 	 *     Calculation.Calculation_1_1 returns Valuable
 	 *     ParenthesizedExpression returns Valuable
 	 *
 	 * Constraint:
-	 *     (left=Valuable operator=Operator right=Valuable)
+	 *     ((leftValue=Literal | leftValue=VariableRef) operator=Operator rightValue=Valuable)
 	 */
 	protected void sequence_Calculation(ISerializationContext context, Valuable semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.VALUABLE__LEFT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.VALUABLE__LEFT));
-			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.VALUABLE__OPERATOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.VALUABLE__OPERATOR));
-			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.VALUABLE__RIGHT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.VALUABLE__RIGHT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCalculationAccess().getLeftValuableParserRuleCall_0_0_0(), semanticObject.getLeft());
-		feeder.accept(grammarAccess.getCalculationAccess().getOperatorOperatorParserRuleCall_0_1_0(), semanticObject.getOperator());
-		feeder.accept(grammarAccess.getCalculationAccess().getRightValuableParserRuleCall_0_2_0(), semanticObject.getRight());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -136,18 +126,18 @@ public class SelfieSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     Declaration returns Declaration
 	 *
 	 * Constraint:
-	 *     (variable=Variable value=Value)
+	 *     (variable=Variable valuable=Valuable)
 	 */
 	protected void sequence_Declaration(ISerializationContext context, Declaration semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.EXPRESSION__VARIABLE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.EXPRESSION__VARIABLE));
-			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.DECLARATION__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.DECLARATION__VALUE));
+			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.EXPRESSION__VALUABLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.EXPRESSION__VALUABLE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDeclarationAccess().getVariableVariableParserRuleCall_1_0(), semanticObject.getVariable());
-		feeder.accept(grammarAccess.getDeclarationAccess().getValueValueParserRuleCall_3_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getDeclarationAccess().getValuableValuableParserRuleCall_3_0(), semanticObject.getValuable());
 		feeder.finish();
 	}
 	
@@ -166,6 +156,20 @@ public class SelfieSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
+	 *     Valuable returns Value
+	 *     Literal returns Value
+	 *     Value returns Value
+	 *
+	 * Constraint:
+	 *     (integer=INTEGER | double=DOUBLE)
+	 */
+	protected void sequence_Value(ISerializationContext context, Value semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Valuable returns VariableRef
 	 *     VariableRef returns VariableRef
 	 *
@@ -174,8 +178,8 @@ public class SelfieSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 */
 	protected void sequence_VariableRef(ISerializationContext context, VariableRef semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.EXPRESSION__VARIABLE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.EXPRESSION__VARIABLE));
+			if (transientValues.isValueTransient(semanticObject, SelfiePackage.Literals.VARIABLE_REF__VARIABLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, SelfiePackage.Literals.VARIABLE_REF__VARIABLE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVariableRefAccess().getVariableVariableParserRuleCall_0(), semanticObject.getVariable());

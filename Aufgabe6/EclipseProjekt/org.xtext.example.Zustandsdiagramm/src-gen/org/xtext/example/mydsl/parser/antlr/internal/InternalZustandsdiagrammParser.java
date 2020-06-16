@@ -118,7 +118,7 @@ public class InternalZustandsdiagrammParser extends AbstractInternalAntlrParser 
 
 
     // $ANTLR start "ruleModel"
-    // InternalZustandsdiagramm.g:71:1: ruleModel returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) ) ) ;
+    // InternalZustandsdiagramm.g:71:1: ruleModel returns [EObject current=null] : ( ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) ) ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -133,40 +133,40 @@ public class InternalZustandsdiagrammParser extends AbstractInternalAntlrParser 
         	enterRule();
 
         try {
-            // InternalZustandsdiagramm.g:77:2: ( ( ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) ) ) )
-            // InternalZustandsdiagramm.g:78:2: ( ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) ) )
+            // InternalZustandsdiagramm.g:77:2: ( ( ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) ) ) )
+            // InternalZustandsdiagramm.g:78:2: ( ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) ) )
             {
-            // InternalZustandsdiagramm.g:78:2: ( ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) ) )
-            // InternalZustandsdiagramm.g:79:3: ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) )
+            // InternalZustandsdiagramm.g:78:2: ( ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) ) )
+            // InternalZustandsdiagramm.g:79:3: ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) )
             {
-            // InternalZustandsdiagramm.g:79:3: ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) )
-            // InternalZustandsdiagramm.g:80:4: ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?)
+            // InternalZustandsdiagramm.g:79:3: ( ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?) )
+            // InternalZustandsdiagramm.g:80:4: ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?)
             {
              
             			  getUnorderedGroupHelper().enter(grammarAccess.getModelAccess().getUnorderedGroup());
             			
-            // InternalZustandsdiagramm.g:83:4: ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?)
-            // InternalZustandsdiagramm.g:84:5: ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?
+            // InternalZustandsdiagramm.g:83:4: ( ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?)
+            // InternalZustandsdiagramm.g:84:5: ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+ {...}?
             {
-            // InternalZustandsdiagramm.g:84:5: ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+
-            int cnt2=0;
-            loop2:
+            // InternalZustandsdiagramm.g:84:5: ( ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) ) | ({...}? => ( ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+ ) ) )+
+            int cnt3=0;
+            loop3:
             do {
-                int alt2=4;
-                int LA2_0 = input.LA(1);
+                int alt3=4;
+                int LA3_0 = input.LA(1);
 
-                if ( LA2_0 == 11 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0) ) {
-                    alt2=1;
+                if ( LA3_0 == 11 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 0) ) {
+                    alt3=1;
                 }
-                else if ( LA2_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
-                    alt2=2;
+                else if ( LA3_0 == 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
+                    alt3=2;
                 }
-                else if ( LA2_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2) ) {
-                    alt2=3;
+                else if ( LA3_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 2) ) {
+                    alt3=3;
                 }
 
 
-                switch (alt2) {
+                switch (alt3) {
             	case 1 :
             	    // InternalZustandsdiagramm.g:85:3: ({...}? => ( ({...}? => ( (lv_initialState_1_0= ruleInitialState ) ) ) ) )
             	    {
@@ -235,59 +235,88 @@ public class InternalZustandsdiagrammParser extends AbstractInternalAntlrParser 
             	    }
             	    break;
             	case 2 :
-            	    // InternalZustandsdiagramm.g:113:3: ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) )
+            	    // InternalZustandsdiagramm.g:113:3: ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) )
             	    {
-            	    // InternalZustandsdiagramm.g:113:3: ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) ) )
-            	    // InternalZustandsdiagramm.g:114:4: {...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) )
+            	    // InternalZustandsdiagramm.g:113:3: ({...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ ) )
+            	    // InternalZustandsdiagramm.g:114:4: {...}? => ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleModel", "getUnorderedGroupHelper().canSelect(grammarAccess.getModelAccess().getUnorderedGroup(), 1)");
             	    }
-            	    // InternalZustandsdiagramm.g:114:99: ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) ) )
-            	    // InternalZustandsdiagramm.g:115:5: ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )
+            	    // InternalZustandsdiagramm.g:114:99: ( ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+ )
+            	    // InternalZustandsdiagramm.g:115:5: ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+
             	    {
 
             	    					getUnorderedGroupHelper().select(grammarAccess.getModelAccess().getUnorderedGroup(), 1);
             	    				
-            	    // InternalZustandsdiagramm.g:118:8: ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )
-            	    // InternalZustandsdiagramm.g:118:9: {...}? => ( (lv_finalState_2_0= ruleFinalState ) )
-            	    {
-            	    if ( !((true)) ) {
-            	        throw new FailedPredicateException(input, "ruleModel", "true");
-            	    }
-            	    // InternalZustandsdiagramm.g:118:18: ( (lv_finalState_2_0= ruleFinalState ) )
-            	    // InternalZustandsdiagramm.g:118:19: (lv_finalState_2_0= ruleFinalState )
-            	    {
-            	    // InternalZustandsdiagramm.g:118:19: (lv_finalState_2_0= ruleFinalState )
-            	    // InternalZustandsdiagramm.g:119:9: lv_finalState_2_0= ruleFinalState
-            	    {
+            	    // InternalZustandsdiagramm.g:118:8: ({...}? => ( (lv_finalState_2_0= ruleFinalState ) ) )+
+            	    int cnt1=0;
+            	    loop1:
+            	    do {
+            	        int alt1=2;
+            	        int LA1_0 = input.LA(1);
 
-            	    									newCompositeNode(grammarAccess.getModelAccess().getFinalStateFinalStateParserRuleCall_1_0());
-            	    								
-            	    pushFollow(FOLLOW_3);
-            	    lv_finalState_2_0=ruleFinalState();
+            	        if ( (LA1_0==15) ) {
+            	            int LA1_2 = input.LA(2);
 
-            	    state._fsp--;
+            	            if ( ((true)) ) {
+            	                alt1=1;
+            	            }
 
 
-            	    									if (current==null) {
-            	    										current = createModelElementForParent(grammarAccess.getModelRule());
-            	    									}
-            	    									add(
-            	    										current,
-            	    										"finalState",
-            	    										lv_finalState_2_0,
-            	    										"org.xtext.example.mydsl.Zustandsdiagramm.FinalState");
-            	    									afterParserOrEnumRuleCall();
-            	    								
-
-            	    }
+            	        }
 
 
-            	    }
+            	        switch (alt1) {
+            	    	case 1 :
+            	    	    // InternalZustandsdiagramm.g:118:9: {...}? => ( (lv_finalState_2_0= ruleFinalState ) )
+            	    	    {
+            	    	    if ( !((true)) ) {
+            	    	        throw new FailedPredicateException(input, "ruleModel", "true");
+            	    	    }
+            	    	    // InternalZustandsdiagramm.g:118:18: ( (lv_finalState_2_0= ruleFinalState ) )
+            	    	    // InternalZustandsdiagramm.g:118:19: (lv_finalState_2_0= ruleFinalState )
+            	    	    {
+            	    	    // InternalZustandsdiagramm.g:118:19: (lv_finalState_2_0= ruleFinalState )
+            	    	    // InternalZustandsdiagramm.g:119:9: lv_finalState_2_0= ruleFinalState
+            	    	    {
+
+            	    	    									newCompositeNode(grammarAccess.getModelAccess().getFinalStateFinalStateParserRuleCall_1_0());
+            	    	    								
+            	    	    pushFollow(FOLLOW_3);
+            	    	    lv_finalState_2_0=ruleFinalState();
+
+            	    	    state._fsp--;
 
 
-            	    }
+            	    	    									if (current==null) {
+            	    	    										current = createModelElementForParent(grammarAccess.getModelRule());
+            	    	    									}
+            	    	    									add(
+            	    	    										current,
+            	    	    										"finalState",
+            	    	    										lv_finalState_2_0,
+            	    	    										"org.xtext.example.mydsl.Zustandsdiagramm.FinalState");
+            	    	    									afterParserOrEnumRuleCall();
+            	    	    								
+
+            	    	    }
+
+
+            	    	    }
+
+
+            	    	    }
+            	    	    break;
+
+            	    	default :
+            	    	    if ( cnt1 >= 1 ) break loop1;
+            	                EarlyExitException eee =
+            	                    new EarlyExitException(1, input);
+            	                throw eee;
+            	        }
+            	        cnt1++;
+            	    } while (true);
 
             	     
             	    					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getModelAccess().getUnorderedGroup());
@@ -317,24 +346,24 @@ public class InternalZustandsdiagrammParser extends AbstractInternalAntlrParser 
             	    					getUnorderedGroupHelper().select(grammarAccess.getModelAccess().getUnorderedGroup(), 2);
             	    				
             	    // InternalZustandsdiagramm.g:146:8: ({...}? => ( (lv_genericState_3_0= ruleGenericState ) ) )+
-            	    int cnt1=0;
-            	    loop1:
+            	    int cnt2=0;
+            	    loop2:
             	    do {
-            	        int alt1=2;
-            	        int LA1_0 = input.LA(1);
+            	        int alt2=2;
+            	        int LA2_0 = input.LA(1);
 
-            	        if ( (LA1_0==16) ) {
-            	            int LA1_2 = input.LA(2);
+            	        if ( (LA2_0==16) ) {
+            	            int LA2_2 = input.LA(2);
 
             	            if ( ((true)) ) {
-            	                alt1=1;
+            	                alt2=1;
             	            }
 
 
             	        }
 
 
-            	        switch (alt1) {
+            	        switch (alt2) {
             	    	case 1 :
             	    	    // InternalZustandsdiagramm.g:146:9: {...}? => ( (lv_genericState_3_0= ruleGenericState ) )
             	    	    {
@@ -377,12 +406,12 @@ public class InternalZustandsdiagrammParser extends AbstractInternalAntlrParser 
             	    	    break;
 
             	    	default :
-            	    	    if ( cnt1 >= 1 ) break loop1;
+            	    	    if ( cnt2 >= 1 ) break loop2;
             	                EarlyExitException eee =
-            	                    new EarlyExitException(1, input);
+            	                    new EarlyExitException(2, input);
             	                throw eee;
             	        }
-            	        cnt1++;
+            	        cnt2++;
             	    } while (true);
 
             	     
@@ -399,12 +428,12 @@ public class InternalZustandsdiagrammParser extends AbstractInternalAntlrParser 
             	    break;
 
             	default :
-            	    if ( cnt2 >= 1 ) break loop2;
+            	    if ( cnt3 >= 1 ) break loop3;
                         EarlyExitException eee =
-                            new EarlyExitException(2, input);
+                            new EarlyExitException(3, input);
                         throw eee;
                 }
-                cnt2++;
+                cnt3++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getModelAccess().getUnorderedGroup()) ) {
@@ -916,18 +945,18 @@ public class InternalZustandsdiagrammParser extends AbstractInternalAntlrParser 
             			newLeafNode(otherlv_3, grammarAccess.getGenericStateAccess().getWithKeyword_3());
             		
             // InternalZustandsdiagramm.g:383:3: ( (lv_transitions_4_0= ruleTransition ) )+
-            int cnt3=0;
-            loop3:
+            int cnt4=0;
+            loop4:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( (LA3_0==17) ) {
-                    alt3=1;
+                if ( (LA4_0==17) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt4) {
             	case 1 :
             	    // InternalZustandsdiagramm.g:384:4: (lv_transitions_4_0= ruleTransition )
             	    {
@@ -961,12 +990,12 @@ public class InternalZustandsdiagrammParser extends AbstractInternalAntlrParser 
             	    break;
 
             	default :
-            	    if ( cnt3 >= 1 ) break loop3;
+            	    if ( cnt4 >= 1 ) break loop4;
                         EarlyExitException eee =
-                            new EarlyExitException(3, input);
+                            new EarlyExitException(4, input);
                         throw eee;
                 }
-                cnt3++;
+                cnt4++;
             } while (true);
 
             otherlv_5=(Token)match(input,14,FOLLOW_2); 
@@ -1222,13 +1251,13 @@ public class InternalZustandsdiagrammParser extends AbstractInternalAntlrParser 
             }
 
             // InternalZustandsdiagramm.g:506:3: (otherlv_1= 'and' ( (lv_guard_2_0= ruleGuard ) ) )?
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA4_0==19) ) {
-                alt4=1;
+            if ( (LA5_0==19) ) {
+                alt5=1;
             }
-            switch (alt4) {
+            switch (alt5) {
                 case 1 :
                     // InternalZustandsdiagramm.g:507:4: otherlv_1= 'and' ( (lv_guard_2_0= ruleGuard ) )
                     {

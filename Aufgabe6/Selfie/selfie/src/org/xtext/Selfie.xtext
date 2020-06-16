@@ -10,10 +10,10 @@ Expression:
 	Declaration | Assignment;
 	
 Declaration: 
-	'def' variable=Variable ':' value=Value ';';
+	'def' variable=Variable ':' valuable=Valuable';';
 
 Assignment:
-	variable=Variable ':=' valuable=Valuable | Calculation ';';
+	variable=Variable ':=' valuable=Valuable';';
 
 Valuable:
 	Literal|VariableRef|Calculation;
@@ -22,22 +22,22 @@ Literal:
 	Value;	
 	
 Value:
-	INTEGER|DOUBLE;
+	integer=INTEGER | double=DOUBLE;
 	
 terminal INTEGER returns ecore::EInt:
-	'-'?('0'..'9')+;
+	('-')?INT;
 
 terminal DOUBLE returns ecore::EDouble:
-	'-'?('0'..'9')+'.'('0'..'9')+;
+	INTEGER'.'INT;
 
 Variable:
 	name=ID;
 	
 VariableRef:
 	variable=Variable;
-	
-Operator:
-	'+'|'-'|'*'|'/';
+		
+enum Operator:
+	PLUS = '+'| MINUS = '-'| TIMES = '*'| DIVIDED= '/';
 		
 Calculation returns Valuable:
     leftValue=(Literal|VariableRef) operator=Operator rightValue=Valuable |

@@ -257,10 +257,10 @@ public class InternalZustandsdiagrammLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalZustandsdiagramm.g:1346:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalZustandsdiagramm.g:1346:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalZustandsdiagramm.g:1353:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalZustandsdiagramm.g:1353:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalZustandsdiagramm.g:1346:11: ( '^' )?
+            // InternalZustandsdiagramm.g:1353:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -269,7 +269,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalZustandsdiagramm.g:1346:11: '^'
+                    // InternalZustandsdiagramm.g:1353:11: '^'
                     {
                     match('^'); 
 
@@ -287,7 +287,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalZustandsdiagramm.g:1346:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalZustandsdiagramm.g:1353:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -336,10 +336,10 @@ public class InternalZustandsdiagrammLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalZustandsdiagramm.g:1348:10: ( ( '0' .. '9' )+ )
-            // InternalZustandsdiagramm.g:1348:12: ( '0' .. '9' )+
+            // InternalZustandsdiagramm.g:1355:10: ( ( '0' .. '9' )+ )
+            // InternalZustandsdiagramm.g:1355:12: ( '0' .. '9' )+
             {
-            // InternalZustandsdiagramm.g:1348:12: ( '0' .. '9' )+
+            // InternalZustandsdiagramm.g:1355:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -353,7 +353,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalZustandsdiagramm.g:1348:13: '0' .. '9'
+            	    // InternalZustandsdiagramm.g:1355:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -385,10 +385,10 @@ public class InternalZustandsdiagrammLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalZustandsdiagramm.g:1350:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalZustandsdiagramm.g:1350:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalZustandsdiagramm.g:1357:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalZustandsdiagramm.g:1357:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalZustandsdiagramm.g:1350:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalZustandsdiagramm.g:1357:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -406,10 +406,10 @@ public class InternalZustandsdiagrammLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalZustandsdiagramm.g:1350:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalZustandsdiagramm.g:1357:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalZustandsdiagramm.g:1350:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalZustandsdiagramm.g:1357:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -425,7 +425,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalZustandsdiagramm.g:1350:21: '\\\\' .
+                    	    // InternalZustandsdiagramm.g:1357:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -433,7 +433,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalZustandsdiagramm.g:1350:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalZustandsdiagramm.g:1357:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -458,10 +458,10 @@ public class InternalZustandsdiagrammLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalZustandsdiagramm.g:1350:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalZustandsdiagramm.g:1357:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalZustandsdiagramm.g:1350:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalZustandsdiagramm.g:1357:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -477,7 +477,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalZustandsdiagramm.g:1350:54: '\\\\' .
+                    	    // InternalZustandsdiagramm.g:1357:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -485,7 +485,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalZustandsdiagramm.g:1350:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalZustandsdiagramm.g:1357:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -528,12 +528,12 @@ public class InternalZustandsdiagrammLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalZustandsdiagramm.g:1352:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalZustandsdiagramm.g:1352:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalZustandsdiagramm.g:1359:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalZustandsdiagramm.g:1359:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalZustandsdiagramm.g:1352:24: ( options {greedy=false; } : . )*
+            // InternalZustandsdiagramm.g:1359:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -558,7 +558,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalZustandsdiagramm.g:1352:52: .
+            	    // InternalZustandsdiagramm.g:1359:52: .
             	    {
             	    matchAny(); 
 
@@ -588,12 +588,12 @@ public class InternalZustandsdiagrammLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalZustandsdiagramm.g:1354:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalZustandsdiagramm.g:1354:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalZustandsdiagramm.g:1361:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalZustandsdiagramm.g:1361:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalZustandsdiagramm.g:1354:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalZustandsdiagramm.g:1361:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -606,7 +606,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalZustandsdiagramm.g:1354:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalZustandsdiagramm.g:1361:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -626,7 +626,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalZustandsdiagramm.g:1354:40: ( ( '\\r' )? '\\n' )?
+            // InternalZustandsdiagramm.g:1361:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -635,9 +635,9 @@ public class InternalZustandsdiagrammLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalZustandsdiagramm.g:1354:41: ( '\\r' )? '\\n'
+                    // InternalZustandsdiagramm.g:1361:41: ( '\\r' )? '\\n'
                     {
-                    // InternalZustandsdiagramm.g:1354:41: ( '\\r' )?
+                    // InternalZustandsdiagramm.g:1361:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -646,7 +646,7 @@ public class InternalZustandsdiagrammLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalZustandsdiagramm.g:1354:41: '\\r'
+                            // InternalZustandsdiagramm.g:1361:41: '\\r'
                             {
                             match('\r'); 
 
@@ -678,10 +678,10 @@ public class InternalZustandsdiagrammLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalZustandsdiagramm.g:1356:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalZustandsdiagramm.g:1356:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalZustandsdiagramm.g:1363:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalZustandsdiagramm.g:1363:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalZustandsdiagramm.g:1356:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalZustandsdiagramm.g:1363:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -735,8 +735,8 @@ public class InternalZustandsdiagrammLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalZustandsdiagramm.g:1358:16: ( . )
-            // InternalZustandsdiagramm.g:1358:18: .
+            // InternalZustandsdiagramm.g:1365:16: ( . )
+            // InternalZustandsdiagramm.g:1365:18: .
             {
             matchAny(); 
 

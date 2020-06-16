@@ -21,7 +21,13 @@ class SelfieParsingTest {
 	@Test
 	def void loadModel() {
 		val result = parseHelper.parse('''
-			Hello Xtext!
+			def pi: 3.1415;
+			def r: 5;
+			def umfang: 2 * pi * r;
+			def pi2 : 3.1415926;
+			def nearlySame : 2 * pi2 * r - umfang;
+			def s : 10;
+			s := s + (s / 2);			
 		''')
 		Assertions.assertNotNull(result)
 		val errors = result.eResource.errors

@@ -29,7 +29,19 @@ public class SelfieParsingTest {
   public void loadModel() {
     try {
       StringConcatenation _builder = new StringConcatenation();
-      _builder.append("Hello Xtext!");
+      _builder.append("def pi: 3.1415;");
+      _builder.newLine();
+      _builder.append("def r: 5;");
+      _builder.newLine();
+      _builder.append("def umfang: 2 * pi * r;");
+      _builder.newLine();
+      _builder.append("def pi2 : 3.1415926;");
+      _builder.newLine();
+      _builder.append("def nearlySame : 2 * pi2 * r - umfang;");
+      _builder.newLine();
+      _builder.append("def s : 10;");
+      _builder.newLine();
+      _builder.append("s := s + (s / 2);\t\t\t");
       _builder.newLine();
       final Model result = this.parseHelper.parse(_builder);
       Assertions.assertNotNull(result);

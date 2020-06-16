@@ -5,6 +5,7 @@ package org.xtext.selfie.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -14,10 +15,13 @@ import org.xtext.selfie.Assignment;
 import org.xtext.selfie.Calculation;
 import org.xtext.selfie.Declaration;
 import org.xtext.selfie.Expression;
+import org.xtext.selfie.Literal;
 import org.xtext.selfie.Model;
+import org.xtext.selfie.Operator;
 import org.xtext.selfie.SelfieFactory;
 import org.xtext.selfie.SelfiePackage;
 import org.xtext.selfie.Valuable;
+import org.xtext.selfie.Value;
 import org.xtext.selfie.Variable;
 import org.xtext.selfie.VariableRef;
 
@@ -69,6 +73,20 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass literalEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass valueEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass variableEClass = null;
 
   /**
@@ -84,6 +102,13 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
    * @generated
    */
   private EClass calculationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum operatorEEnum = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -198,9 +223,9 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
    * @generated
    */
   @Override
-  public EClass getDeclaration()
+  public EReference getExpression_Valuable()
   {
-    return declarationEClass;
+    return (EReference)expressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -209,9 +234,9 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
    * @generated
    */
   @Override
-  public EAttribute getDeclaration_Value()
+  public EClass getDeclaration()
   {
-    return (EAttribute)declarationEClass.getEStructuralFeatures().get(0);
+    return declarationEClass;
   }
 
   /**
@@ -231,17 +256,6 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
    * @generated
    */
   @Override
-  public EReference getAssignment_Valuable()
-  {
-    return (EReference)assignmentEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getValuable()
   {
     return valuableEClass;
@@ -253,7 +267,7 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
    * @generated
    */
   @Override
-  public EReference getValuable_Left()
+  public EReference getValuable_LeftValue()
   {
     return (EReference)valuableEClass.getEStructuralFeatures().get(0);
   }
@@ -275,9 +289,53 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
    * @generated
    */
   @Override
-  public EReference getValuable_Right()
+  public EReference getValuable_RightValue()
   {
     return (EReference)valuableEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getLiteral()
+  {
+    return literalEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getValue()
+  {
+    return valueEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getValue_Integer()
+  {
+    return (EAttribute)valueEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getValue_Double()
+  {
+    return (EAttribute)valueEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -319,9 +377,31 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
    * @generated
    */
   @Override
+  public EReference getVariableRef_Variable()
+  {
+    return (EReference)variableRefEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getCalculation()
   {
     return calculationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EEnum getOperator()
+  {
+    return operatorEEnum;
   }
 
   /**
@@ -360,24 +440,33 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
 
     expressionEClass = createEClass(EXPRESSION);
     createEReference(expressionEClass, EXPRESSION__VARIABLE);
+    createEReference(expressionEClass, EXPRESSION__VALUABLE);
 
     declarationEClass = createEClass(DECLARATION);
-    createEAttribute(declarationEClass, DECLARATION__VALUE);
 
     assignmentEClass = createEClass(ASSIGNMENT);
-    createEReference(assignmentEClass, ASSIGNMENT__VALUABLE);
 
     valuableEClass = createEClass(VALUABLE);
-    createEReference(valuableEClass, VALUABLE__LEFT);
+    createEReference(valuableEClass, VALUABLE__LEFT_VALUE);
     createEAttribute(valuableEClass, VALUABLE__OPERATOR);
-    createEReference(valuableEClass, VALUABLE__RIGHT);
+    createEReference(valuableEClass, VALUABLE__RIGHT_VALUE);
+
+    literalEClass = createEClass(LITERAL);
+
+    valueEClass = createEClass(VALUE);
+    createEAttribute(valueEClass, VALUE__INTEGER);
+    createEAttribute(valueEClass, VALUE__DOUBLE);
 
     variableEClass = createEClass(VARIABLE);
     createEAttribute(variableEClass, VARIABLE__NAME);
 
     variableRefEClass = createEClass(VARIABLE_REF);
+    createEReference(variableRefEClass, VARIABLE_REF__VARIABLE);
 
     calculationEClass = createEClass(CALCULATION);
+
+    // Create enums
+    operatorEEnum = createEEnum(OPERATOR);
   }
 
   /**
@@ -411,7 +500,8 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
     // Add supertypes to classes
     declarationEClass.getESuperTypes().add(this.getExpression());
     assignmentEClass.getESuperTypes().add(this.getExpression());
-    valuableEClass.getESuperTypes().add(this.getAssignment());
+    literalEClass.getESuperTypes().add(this.getValuable());
+    valueEClass.getESuperTypes().add(this.getLiteral());
     variableRefEClass.getESuperTypes().add(this.getValuable());
     calculationEClass.getESuperTypes().add(this.getValuable());
 
@@ -421,24 +511,37 @@ public class SelfiePackageImpl extends EPackageImpl implements SelfiePackage
 
     initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExpression_Variable(), this.getVariable(), null, "variable", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExpression_Valuable(), this.getValuable(), null, "valuable", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(declarationEClass, Declaration.class, "Declaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDeclaration_Value(), ecorePackage.getEString(), "value", null, 0, 1, Declaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(assignmentEClass, Assignment.class, "Assignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAssignment_Valuable(), this.getValuable(), null, "valuable", null, 0, 1, Assignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(valuableEClass, Valuable.class, "Valuable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getValuable_Left(), this.getValuable(), null, "left", null, 0, 1, Valuable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getValuable_Operator(), ecorePackage.getEString(), "operator", null, 0, 1, Valuable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getValuable_Right(), this.getValuable(), null, "right", null, 0, 1, Valuable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getValuable_LeftValue(), this.getValuable(), null, "leftValue", null, 0, 1, Valuable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getValuable_Operator(), this.getOperator(), "operator", null, 0, 1, Valuable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getValuable_RightValue(), this.getValuable(), null, "rightValue", null, 0, 1, Valuable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getValue_Integer(), ecorePackage.getEInt(), "integer", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getValue_Double(), ecorePackage.getEDouble(), "double", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(variableRefEClass, VariableRef.class, "VariableRef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getVariableRef_Variable(), this.getVariable(), null, "variable", null, 0, 1, VariableRef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(calculationEClass, Calculation.class, "Calculation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    // Initialize enums and add enum literals
+    initEEnum(operatorEEnum, Operator.class, "Operator");
+    addEEnumLiteral(operatorEEnum, Operator.PLUS);
+    addEEnumLiteral(operatorEEnum, Operator.MINUS);
+    addEEnumLiteral(operatorEEnum, Operator.TIMES);
+    addEEnumLiteral(operatorEEnum, Operator.DIVIDED);
 
     // Create resource
     createResource(eNS_URI);

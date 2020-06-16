@@ -1057,9 +1057,16 @@ rule__Model__UnorderedGroup__Impl
 					selected = true;
 				}
 				(
-					{ before(grammarAccess.getModelAccess().getFinalStateAssignment_1()); }
-					(rule__Model__FinalStateAssignment_1)
-					{ after(grammarAccess.getModelAccess().getFinalStateAssignment_1()); }
+					(
+						{ before(grammarAccess.getModelAccess().getFinalStateAssignment_1()); }
+						(rule__Model__FinalStateAssignment_1)
+						{ after(grammarAccess.getModelAccess().getFinalStateAssignment_1()); }
+					)
+					(
+						{ before(grammarAccess.getModelAccess().getFinalStateAssignment_1()); }
+						((rule__Model__FinalStateAssignment_1)=>rule__Model__FinalStateAssignment_1)*
+						{ after(grammarAccess.getModelAccess().getFinalStateAssignment_1()); }
+					)
 				)
 			)
 		)|
